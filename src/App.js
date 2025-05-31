@@ -9,13 +9,13 @@ import PricingPage from "./pages/PricingPage";
 
 function App() {
   return (
-    <Router basename="SmartTableNZ">
+    <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/SmartTableNZ/" element={<HomePage />} />
+        <Route path="/SmartTableNZ/pricing" element={<PricingPage />} />
+        <Route path="/SmartTableNZ/contact" element={<ContactPage />} />
+        <Route path="/SmartTableNZ/products" element={<ProductsPage />} />
+        <Route path="/SmartTableNZ*" element={<NotFound />} />
       </Routes>
     </Router>
   );
