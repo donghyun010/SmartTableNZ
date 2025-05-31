@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
@@ -11,11 +11,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/SmartTableNZ/" element={<HomePage />} />
-        <Route path="/SmartTableNZ/pricing" element={<PricingPage />} />
-        <Route path="/SmartTableNZ/contact" element={<ContactPage />} />
-        <Route path="/SmartTableNZ/products" element={<ProductsPage />} />
-        <Route path="/SmartTableNZ*" element={<NotFound />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
