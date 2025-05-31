@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import logo from "../assets/images/DarkLogo.png";
+import Header from "./components/Header";
 
 const ContactPage = () => {
   return (
@@ -10,22 +10,7 @@ const ContactPage = () => {
             <div className="logo">
                 <img src={logo} alt="Smart Table Logo" />
             </div>
-            <div className="nav-links">
-              <Link to="/">Home</Link>
-              <div className="dropdown">
-                <Link to="/products" className="dropdown-toggle">Product & Services</Link>
-                <div className="dropdown-content">
-                  <a href="/products#kiosk">Table Kiosk</a>
-                  <a href="/products#pos">Point of Sales (POS)</a>
-                  <a href="/products#kds">Kitchen Display System (KDS)</a>
-                  <a href="/products#qr">QR Code Ordering</a>
-                  <a href="/products#online-ordering">Online Ordering</a>
-                  <a href="/products#reservation">Online Reservation</a>
-                </div>
-              </div>
-              <Link to="/pricing">Pricing</Link>
-              <Link to="/contact">Contact</Link>
-            </div>
+            <Header />
           </nav>
         </div>
       </header>

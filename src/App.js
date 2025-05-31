@@ -9,10 +9,9 @@ import PricingPage from "./pages/PricingPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="SmartTableNZ">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/SmartTableNZ" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/products" element={<ProductsPage />} />
