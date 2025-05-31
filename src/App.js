@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products*" element={<ProductsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
