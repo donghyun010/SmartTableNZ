@@ -25,10 +25,10 @@ const HomePage = () => {
       </div>
 
       <section className="hero">
-        <h1>ELEVATE DINING SIMPLIFY OPERATIONS</h1>
+        <h1>HI DINING SIMPLIFY OPERATIONS</h1>
         <p>
-          Enhance your customers' experience while reducing costs and
-          increasing efficiency with Smart Table
+          Enhance your customers' experience while reducing costs and increasing
+          efficiency with Smart Table
         </p>
       </section>
 
