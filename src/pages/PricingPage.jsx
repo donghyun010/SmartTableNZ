@@ -25,7 +25,7 @@ const PricingPage = () => {
         <div className="header-box">
           <nav>
             <div className="logo">
-                <img src={logo} alt="Smart Table Logo" />
+              <img src={logo} alt="Smart Table Logo" />
             </div>
             <Header />
           </nav>
@@ -48,15 +48,18 @@ const PricingPage = () => {
             <div className="feature">
               <h3>3-Month Contract</h3>
               <p>
-                Ideal for short-term flexibility.<br />
+                Ideal for short-term flexibility.
+                <br />
                 <strong>$20/table/week</strong>
               </p>
             </div>
             <div className="feature">
               <h3>3-Month Percentage Option</h3>
               <p>
-                Pay as you grow.<br />
-                <strong>2.0% of total weekly sales</strong><br />
+                Pay as you grow.
+                <br />
+                <strong>2.0% of total weekly sales</strong>
+                <br />
                 (whichever is higher)
               </p>
             </div>
@@ -66,15 +69,18 @@ const PricingPage = () => {
             <div className="feature">
               <h3>1-Year Contract</h3>
               <p>
-                Best value for established venues.<br />
+                Best value for established venues.
+                <br />
                 <strong>$15/table/week</strong>
               </p>
             </div>
             <div className="feature">
               <h3>1-Year Percentage Option</h3>
               <p>
-                Long-term savings with flexibility.<br />
-                <strong>1.5% of total weekly sales</strong><br />
+                Long-term savings with flexibility.
+                <br />
+                <strong>1.5% of total weekly sales</strong>
+                <br />
                 (whichever is higher)
               </p>
             </div>
@@ -107,22 +113,44 @@ const PricingPage = () => {
           <div className="result-box">
             <div className="result-title">Your Weekly Cost</div>
             <div className="result-value">
-              ${weeklyCost.toLocaleString(undefined, {
+              $
+              {weeklyCost.toLocaleString(undefined, {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}
             </div>
             <div className="result-note">
-              * Your Weekly Cost does not include installation fee. <br />
-              * It includes both hardware and software subscription, plus
-              insurance for all hardware.
+              * Your Weekly Cost does not include installation fee. <br />* It
+              includes both hardware and software subscription, plus insurance
+              for all hardware.
             </div>
           </div>
         </div>
       </section>
 
-      <footer>
-        <p>&copy; 2025 Smart Table. All rights reserved.</p>
+      <footer className="footer">
+        <div className="footer-columns">
+          <div className="footer-column">
+            <h4>Home</h4>
+            <a href="#">Smart Ordering in 3 Steps</a>
+            <a href="#">Why Smart Table</a>
+          </div>
+          <div className="footer-column">
+            <h4>Products & Services</h4>
+            <a href="#">How It Works</a>
+            <a href="#">What We Offer</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div className="footer-column">
+            <h4>Pricing</h4>
+            <a href="#">Pricing Plans</a>
+            <a href="#">Get Your Quote</a>
+          </div>
+          <div className="footer-column">
+            <h4>Contact</h4>
+            <a href="#">Get In Touch</a>
+          </div>
+        </div>
       </footer>
     </div>
   );

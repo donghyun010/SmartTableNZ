@@ -1,5 +1,7 @@
+import React from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
+import Footer from "./components/Footer"; // Adjust path if needed
 
 const ContactPage = () => {
   return (
@@ -8,7 +10,7 @@ const ContactPage = () => {
         <div className="header-box">
           <nav>
             <div className="logo">
-                <img src={logo} alt="Smart Table Logo" />
+              <img src={logo} alt="Smart Table Logo" />
             </div>
             <Header />
           </nav>
@@ -24,11 +26,14 @@ const ContactPage = () => {
         </svg>
       </div>
 
-      <section className="section">
+      <section className="section white-bg">
         <h1 style={{ textAlign: "center" }}>Contact Us</h1>
-        <div className="contact-form" style={{ maxWidth: "900px", margin: "0 auto" }}>
+        <div
+          className="contact-form"
+          style={{ maxWidth: "900px", margin: "0 auto" }}
+        >
           <form
-            action="https://formspree.io/f/yourformid" // Replace with your actual Formspree form ID
+            action="https://formspree.io/f/yourformid" // 🔁 Replace with your actual Formspree form ID
             method="POST"
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
           >
@@ -68,16 +73,16 @@ const ContactPage = () => {
               Send Message
             </button>
           </form>
+
           <p style={{ textAlign: "center", marginTop: "20px" }}>
             Or email us directly at{" "}
-            <a href="mailto:contact@smarttable.co.nz">contact@smarttable.co.nz</a>
+            <a href="mailto:contact@smarttable.co.nz">
+              contact@smarttable.co.nz
+            </a>
           </p>
         </div>
       </section>
-
-      <footer>
-        <p>&copy; 2025 Smart Table. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

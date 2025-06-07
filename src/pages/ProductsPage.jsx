@@ -8,7 +8,7 @@ const ProductsPage = () => {
         <div className="header-box">
           <nav>
             <div className="logo">
-                <img src={logo} alt="Smart Table Logo" />
+              <img src={logo} alt="Smart Table Logo" />
             </div>
             <Header />
           </nav>
@@ -28,7 +28,7 @@ const ProductsPage = () => {
         <h1 style={{ textAlign: "center" }}>Our Product & Services</h1>
         <div className="features">
           <div className="feature" id="kiosk">
-            <h3>Table Kiosk</h3>
+            <h3>Table Order Kiosk</h3>
             <p>
               Interactive tablet for customers to browse, order, and pay
               directly from the table.
@@ -63,8 +63,29 @@ const ProductsPage = () => {
         </div>
       </section>
 
-      <footer>
-        <p>&copy; 2025 Smart Table. All rights reserved.</p>
+      <footer className="footer">
+        <div className="footer-columns">
+          <div className="footer-column">
+            <h4>Home</h4>
+            <a href="#">Smart Ordering in 3 Steps</a>
+            <a href="#">Why Smart Table</a>
+          </div>
+          <div className="footer-column">
+            <h4>Products & Services</h4>
+            <a href="#">How It Works</a>
+            <a href="#">What We Offer</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div className="footer-column">
+            <h4>Pricing</h4>
+            <a href="#">Pricing Plans</a>
+            <a href="#">Get Your Quote</a>
+          </div>
+          <div className="footer-column">
+            <h4>Contact</h4>
+            <a href="#">Get In Touch</a>
+          </div>
+        </div>
       </footer>
     </div>
   );
