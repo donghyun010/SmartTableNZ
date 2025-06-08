@@ -128,7 +128,7 @@ const PricingPage = () => {
           </div>
         </div>
       </section>
-     npm <Footer/>
+     <Footer/>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
-import Footer from "./components/Footer"; // Adjust path if needed
+import Footer from "./components/Footer";
 
 const ContactPage = () => {
   return (
