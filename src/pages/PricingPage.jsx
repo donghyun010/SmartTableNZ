@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./PricingPage.css";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const PricingPage = () => {
   const [tables, setTables] = useState("");
@@ -128,30 +129,7 @@ const PricingPage = () => {
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="footer-columns">
-          <div className="footer-column">
-            <h4>Home</h4>
-            <a href="#">Smart Ordering in 3 Steps</a>
-            <a href="#">Why Smart Table</a>
-          </div>
-          <div className="footer-column">
-            <h4>Products & Services</h4>
-            <a href="#">How It Works</a>
-            <a href="#">What We Offer</a>
-            <a href="#">FAQ</a>
-          </div>
-          <div className="footer-column">
-            <h4>Pricing</h4>
-            <a href="#">Pricing Plans</a>
-            <a href="#">Get Your Quote</a>
-          </div>
-          <div className="footer-column">
-            <h4>Contact</h4>
-            <a href="#">Get In Touch</a>
-          </div>
-        </div>
-      </footer>
+    <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const HomePage = () => {
   return (
@@ -159,30 +160,7 @@ const HomePage = () => {
         </a>
       </section>
 
-      <footer className="footer">
-        <div className="footer-columns">
-          <div className="footer-column">
-            <h4>Home</h4>
-            <a href="/#ordering">Smart Ordering in 3 Steps</a>
-            <a href="/#why">Why Smart Table</a>
-          </div>
-          <div className="footer-column">
-            <h4>Products & Services</h4>
-            <a href="/#how-it-works">How It Works</a>
-            <a href="/#features">What We Offer</a>
-            <a href="/faq">FAQ</a>
-          </div>
-          <div className="footer-column">
-            <h4>Pricing</h4>
-            <a href="/pricing">Pricing Plans</a>
-            <a href="/quote">Get Your Quote</a>
-          </div>
-          <div className="footer-column">
-            <h4>Contact</h4>
-            <a href="/contact">Get In Touch</a>
-          </div>
-        </div>
-      </footer>
+     <Footer />
     </>
   );
 };
