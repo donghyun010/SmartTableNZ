@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/SmartTableNZ/static/css/main.fc3baf67.css",
-    "main.js": "/SmartTableNZ/static/js/main.fb9ef5cd.js",
+    "main.js": "/SmartTableNZ/static/js/main.75288f47.js",
     "static/js/453.2e38ae9d.chunk.js": "/SmartTableNZ/static/js/453.2e38ae9d.chunk.js",
     "static/media/DarkLogo.png": "/SmartTableNZ/static/media/DarkLogo.887a0f09ada4ce171cd5.png",
     "index.html": "/SmartTableNZ/index.html",
     "main.fc3baf67.css.map": "/SmartTableNZ/static/css/main.fc3baf67.css.map",
-    "main.fb9ef5cd.js.map": "/SmartTableNZ/static/js/main.fb9ef5cd.js.map",
+    "main.75288f47.js.map": "/SmartTableNZ/static/js/main.75288f47.js.map",
     "453.2e38ae9d.chunk.js.map": "/SmartTableNZ/static/js/453.2e38ae9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc3baf67.css",
-    "static/js/main.fb9ef5cd.js"
+    "static/js/main.75288f47.js"
   ]
 }
