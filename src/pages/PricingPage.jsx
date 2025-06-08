@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./PricingPage.css";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"
 
 const PricingPage = () => {
   const [tables, setTables] = useState("");
@@ -128,8 +128,7 @@ const PricingPage = () => {
           </div>
         </div>
       </section>
-
-    <Footer />
+     npm <Footer/>
     </div>
   );
 };
