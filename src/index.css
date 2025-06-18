@@ -8,7 +8,6 @@
 body {
   line-height: 1.6;
   color: #333;
-  background: linear-gradient(to bottom, #000000, #0a1b36, #1b3662);
   min-height: 100vh;
 }
 
@@ -334,4 +333,24 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* or center if you want the button centered */
+}
+
+body.home-page {
+  background: linear-gradient(to bottom, #000000, #0a1b36, #1b3662);
+}
+
+body.plain-page {
+  background-color: #1b3662 !important;
+}
+
+.section {
+  color: white;
+}
+
+.section h1,
+.section h2,
+.section h3,
+.section p,
+.section strong {
+  color: white;
 }
