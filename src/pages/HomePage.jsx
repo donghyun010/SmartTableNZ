@@ -143,13 +143,20 @@ const HomePage = () => {
         <div className="content-wrapper">
           <h2 className="section-title">Ready to get Started?</h2>
           <hr className="section-divider" />
-          <p>
-            Book a free demo with us today and see how Smart Table can transform
-            your operations.
-          </p>
-          <a href="/contact" className="cta-button">
-            Request a Demo
-          </a>
+
+          <div className="demo-content">
+            <p>
+              Book a free demo with us today and see how Smart Table can
+              transform your operations.
+            </p>
+            <a
+              href="/contact"
+              className="cta-button"
+              style={{ marginTop: "30px", display: "inline-block" }}
+            >
+              Request a Demo
+            </a>
+          </div>
         </div>
       </section>
 

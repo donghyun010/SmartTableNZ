@@ -16,51 +16,68 @@ const ProductsPage = () => {
         </div>
       </header>
 
-      <div className="top-curve">
-        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="#f4f4f4"
-            d="M0,160L80,138.7C160,117,320,75,480,90.7C640,107,800,181,960,181.3C1120,181,1280,107,1360,69.3L1440,32V0H0Z"
-          ></path>
-        </svg>
-      </div>
+      <section className="features-section">
+        <div className="content-wrapper">
+          <h2 className="section-title">Features</h2>
+          <hr className="section-divider" />
+          <div className="benefits-grid">
+            {[
+              {
+                title: "POINT OF SALES (POS)",
+                desc: "Fully customise your table layout and menu anytime – quickly, easily and exactly how you want it.",
+              },
+              {
+                title: "KITCHEN DISPLAY SYSTEM (KDS)",
+                desc: "Seamlessly sync with the POS to simplify order management, with the flexibility to split KDS screens by section or station—customising each view to suit your workflow.",
+              },
+              {
+                title: "MULTIPLE POS & KDS",
+                desc: "Use unlimited POS & KDS devices across your venue – all included, always in sync.",
+              },
+              {
+                title: "ONLINE ORDERING & RESERVATION",
+                desc: "Online ordering and reservation integrated with POS & KDS.",
+              },
+              {
+                title: "QR ORDERING",
+                desc: "Contactless table-side ordering integrated with POS & KDS.",
+              },
+              {
+                title: "SALES ANALYTICS",
+                desc: "Gain actionable insights into your restaurant's performance.",
+              },
+              {
+                title: "INVENTORY MANAGEMENT",
+                desc: "Manage your stock easily.",
+              },
+              {
+                title: "LOYALTY PROGRAM",
+                desc: "Custom loyalty and voucher tools for customers, staff, and companies.",
+              },
+              {
+                title: "DELIVERY SERVICES",
+                desc: "Integrated delivery services including Uber Eats and DoorDash.",
+              },
+            ].map((feature, i) => (
+              <div className="benefit-card" key={i}>
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section className="section">
-        <h1 style={{ textAlign: "center" }}>Our Product & Services</h1>
-        <div className="features">
-          <div className="feature" id="kiosk">
-            <h3>Table Order Kiosk</h3>
-            <p>
-              Interactive tablet for customers to browse, order, and pay
-              directly from the table.
-            </p>
-          </div>
-          <div className="feature" id="pos">
-            <h3>Point of Sales (POS)</h3>
-            <p>
-              Integrated Point of Sale to manage all orders and payments in
-              real-time.
-            </p>
-          </div>
-          <div className="feature" id="kds">
-            <h3>Kitchen Display System (KDS)</h3>
-            <p>
-              Orders instantly appear on the kitchen screen to reduce errors and
-              delays.
-            </p>
-          </div>
-          <div className="feature" id="qr">
-            <h3>QR Code Ordering</h3>
-            <p>Scan, order, and pay without needing staff interaction.</p>
-          </div>
-          <div className="feature" id="online-ordering">
-            <h3>Online Ordering</h3>
-            <p>Let customers order remotely via web or mobile.</p>
-          </div>
-          <div className="feature" id="reservation">
-            <h3>Online Reservation</h3>
-            <p>Customers can book tables through your website or app.</p>
-          </div>
+      <section className="highlighted-feature">
+        <div className="content-wrapper">
+          <h2 className="section-title">Optional Add-On: Table Order Kiosk</h2>
+          <hr className="section-divider" />
+          <p>
+            Our Table Order Kiosk system transforms dining with securely mounted
+            tablets at each table. This premium solution streamlines operations,
+            speeds up service, and enhances the customer experience with
+            seamless interactive ordering.
+          </p>
         </div>
       </section>
 

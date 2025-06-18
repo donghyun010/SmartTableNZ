@@ -3,21 +3,25 @@ import { useState } from "react";
 import "./PricingPage.css";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 const PricingPage = () => {
-  const [tables, setTables] = useState("");
-  const [contractRate, setContractRate] = useState("");
-  const [weeklyCost, setWeeklyCost] = useState(0);
+  const [tabletCount, setTabletCount] = useState(0);
+  const [kioskIncluded, setKioskIncluded] = useState(false);
+  const [kioskContract, setKioskContract] = useState("3month");
+  const [monthlyCost, setMonthlyCost] = useState(0);
 
   const handleCalculate = () => {
-    if (!contractRate) {
-      alert("Please select a contract type.");
-      return;
+    const baseCost = 150;
+    const tabletCost = tabletCount * 50;
+    let total = baseCost + tabletCost;
+
+    if (kioskIncluded) {
+      const kioskRate = kioskContract === "1year" ? 15 : 20;
+      total += kioskRate * tabletCount;
     }
-    const numTables = parseFloat(tables) || 0;
-    const result = numTables * parseFloat(contractRate);
-    setWeeklyCost(result);
+
+    setMonthlyCost(total);
   };
 
   return (
@@ -32,15 +36,6 @@ const PricingPage = () => {
           </nav>
         </div>
       </header>
-
-      <div className="top-curve">
-        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="#f4f4f4"
-            d="M0,160L80,138.7C160,117,320,75,480,90.7C640,107,800,181,960,181.3C1120,181,1280,107,1360,69.3L1440,32V0H0Z"
-          ></path>
-        </svg>
-      </div>
 
       <section className="section">
         <h1 style={{ textAlign: "center" }}>Pricing Options</h1>
@@ -65,7 +60,6 @@ const PricingPage = () => {
               </p>
             </div>
           </div>
-
           <div className="pricing-col">
             <div className="feature">
               <h3>1-Year Contract</h3>
@@ -90,45 +84,63 @@ const PricingPage = () => {
       </section>
 
       <section className="section">
-        <h2 style={{ textAlign: "center" }}>Estimate Your Weekly Cost</h2>
+        <h2 style={{ textAlign: "center" }}>Estimate Your Monthly Cost</h2>
         <div className="calculator">
           <div className="inputs">
+            <label htmlFor="tabletCount">Number of POS & KDS Tablets</label>
             <select
-              value={contractRate}
-              onChange={(e) => setContractRate(e.target.value)}
+              id="tabletCount"
+              value={tabletCount}
+              onChange={(e) => setTabletCount(Number(e.target.value))}
             >
-              <option value="">Select Contract Type</option>
-              <option value="15">Option 1 (1 Year Contract)</option>
-              <option value="20">Option 2 (Monthly Contract)</option>
+              {[...Array(21).keys()].map((num) => (
+                <option key={num} value={num}>
+                  {num}
+                </option>
+              ))}
             </select>
-            <input
-              type="number"
-              placeholder="Number of Tables"
-              value={tables}
-              onChange={(e) => setTables(e.target.value)}
-              min="0"
-            />
+
+            <label>
+              <input
+                type="checkbox"
+                checked={kioskIncluded}
+                onChange={(e) => setKioskIncluded(e.target.checked)}
+              />
+              Include Table Order Kiosk
+            </label>
+
+            {kioskIncluded && (
+              <select
+                value={kioskContract}
+                onChange={(e) => setKioskContract(e.target.value)}
+              >
+                <option value="3month">3-Month Contract ($20/tablet)</option>
+                <option value="1year">1-Year Contract ($15/tablet)</option>
+              </select>
+            )}
+
             <button onClick={handleCalculate}>Get Your Quote</button>
           </div>
 
           <div className="result-box">
-            <div className="result-title">Your Weekly Cost</div>
+            <div className="result-title">Your Monthly Cost</div>
             <div className="result-value">
               $
-              {weeklyCost.toLocaleString(undefined, {
+              {monthlyCost.toLocaleString(undefined, {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}
             </div>
             <div className="result-note">
-              * Your Weekly Cost does not include installation fee. <br />* It
-              includes both hardware and software subscription, plus insurance
-              for all hardware.
+              * This estimate is based on a 1-year contract.
+              <br />* Includes POS & KDS software, hardware, and optional Kiosk
+              system.
             </div>
           </div>
         </div>
       </section>
-     <Footer/>
+
+      <Footer />
     </div>
   );
 };

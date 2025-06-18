@@ -17,15 +17,6 @@ const ContactPage = () => {
         </div>
       </header>
 
-      <div className="top-curve">
-        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="#f4f4f4"
-            d="M0,160L80,138.7C160,117,320,75,480,90.7C640,107,800,181,960,181.3C1120,181,1280,107,1360,69.3L1440,32V0H0Z"
-          ></path>
-        </svg>
-      </div>
-
       <section className="section white-bg">
         <h1 style={{ textAlign: "center" }}>Contact Us</h1>
         <div
