@@ -5,77 +5,170 @@ import Footer from "./components/Footer";
 
 const ContactPage = () => {
   return (
-    <div>
+    <div
+      style={{ backgroundColor: "#1b3662", color: "#fff", minHeight: "100vh" }}
+    >
       <header>
         <div className="header-box">
-          <nav>
+          <nav
+            style={{ display: "flex", alignItems: "center", padding: "20px" }}
+          >
             <div className="logo">
-              <img src={logo} alt="Smart Table Logo" />
+              <img
+                src={logo}
+                alt="Smart Table Logo"
+                style={{ height: "40px" }}
+              />
             </div>
             <Header />
           </nav>
         </div>
       </header>
 
-      <section className="section white-bg">
-        <h1 style={{ textAlign: "center" }}>Contact Us</h1>
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "60px 20px",
+        }}
+      >
         <div
-          className="contact-form"
-          style={{ maxWidth: "900px", margin: "0 auto" }}
+          style={{
+            display: "flex",
+            maxWidth: "1000px",
+            width: "100%",
+            gap: "60px",
+            flexWrap: "wrap",
+          }}
         >
-          <form
-            action="https://formspree.io/f/yourformid" // 🔁 Replace with your actual Formspree form ID
-            method="POST"
-            style={{ display: "flex", flexDirection: "column", gap: "15px" }}
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
+          {/* Left Side */}
+          <div style={{ flex: "1 1 300px" }}>
+            <p
               style={{
-                padding: "10px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-              }}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-              style={{
-                padding: "10px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-              }}
-            ></textarea>
-            <button
-              type="submit"
-              style={{
-                padding: "10px 20px",
-                backgroundColor: "#1b3662",
-                color: "white",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
+                color: "##00bcd4",
+                fontWeight: "500",
+                marginBottom: "10px",
               }}
             >
-              Send Message
-            </button>
-          </form>
+              Contact Us
+            </p>
+            <h1
+              style={{
+                fontSize: "48px",
+                fontWeight: "700",
+                margin: "0 0 20px",
+              }}
+            >
+              How can we help?
+            </h1>
+            <p style={{ fontSize: "16px", color: "#ccc" }}>
+              Let’s kick-start the conversation and discuss your path to
+              transformative growth.
+            </p>
+          </div>
 
-          <p style={{ textAlign: "center", marginTop: "20px" }}>
-            Or email us directly at{" "}
-            <a href="mailto:contact@smarttable.co.nz">
-              contact@smarttable.co.nz
-            </a>
-          </p>
+          {/* Right Side (Form) */}
+          <div style={{ flex: "1 1 300px" }}>
+            <form
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST"
+              style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+            >
+              <label style={{ fontWeight: 500 }}>
+                Name<span style={{ color: "##00bcd4" }}> *</span>
+              </label>
+              <input type="text" name="name" required style={inputStyle} />
+
+              <label style={{ fontWeight: 500 }}>
+                Email<span style={{ color: "##00bcd4" }}> *</span>
+              </label>
+              <input type="email" name="email" required style={inputStyle} />
+
+              <label style={{ fontWeight: 500 }}>Phone</label>
+              <input type="tel" name="phone" style={inputStyle} />
+
+              <label style={{ fontWeight: 500 }}>Message</label>
+              <textarea
+                name="message"
+                rows="4"
+                required
+                style={{ ...inputStyle, resize: "vertical" }}
+              />
+
+              {/* reCAPTCHA placeholder */}
+              <div
+                style={{
+                  background: "#fff",
+                  padding: "10px",
+                  borderRadius: "5px",
+                  color: "#000",
+                  textAlign: "center",
+                }}
+              >
+                <p style={{ margin: 0 }}>
+                  I'm not a robot (reCAPTCHA placeholder)
+                </p>
+              </div>
+
+              <label style={{ fontSize: "14px" }}>
+                <input
+                  type="checkbox"
+                  required
+                  style={{ marginRight: "8px" }}
+                />
+                I agree to the Smart Table{" "}
+                <a
+                  href="/privacy-policy"
+                  style={{ color: "##00bcd4", textDecoration: "underline" }}
+                >
+                  Privacy Policy
+                </a>
+                .
+              </label>
+
+              <div style={{ display: "flex", gap: "10px" }}>
+                <button type="submit" style={submitButtonStyle}>
+                  Submit
+                </button>
+                <button type="reset" style={resetButtonStyle}>
+                  Reset
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
+};
+
+const inputStyle = {
+  padding: "10px",
+  border: "none",
+  borderRadius: "5px",
+  backgroundColor: "rgba(255,255,255,0.1)",
+  color: "#fff",
+};
+
+const submitButtonStyle = {
+  padding: "10px 20px",
+  backgroundColor: "##00bcd4",
+  color: "#fff",
+  border: "none",
+  borderRadius: "5px",
+  cursor: "pointer",
+};
+
+const resetButtonStyle = {
+  padding: "10px 20px",
+  backgroundColor: "#fff",
+  color: "#000",
+  border: "none",
+  borderRadius: "5px",
+  cursor: "pointer",
 };
 
 export default ContactPage;

@@ -27,17 +27,17 @@ const ProductsPage = () => {
               {
                 title: "POINT OF SALES (POS)",
                 desc: "Fully customise your table layout and menu anytime – quickly, easily and exactly how you want it.",
-                img: require("../assets/images/Image 1.jpg"),
+                img: require("../assets/images/Image 5.jpg"),
               },
               {
                 title: "KITCHEN DISPLAY SYSTEM (KDS)",
                 desc: "Seamlessly sync with the POS to simplify order management, with the flexibility to split KDS screens by section or station—customising each view to suit your workflow.",
-                img: require("../assets/images/Image 2.jpg"),
+                img: require("../assets/images/Image 6.jpg"),
               },
               {
                 title: "MULTIPLE POS & KDS",
                 desc: "Use unlimited POS & KDS devices across your venue – all included, always in sync.",
-                img: require("../assets/images/Image 3.jpg"),
+                img: require("../assets/images/Image 7.jpg"),
               },
               {
                 title: "ONLINE ORDERING & RESERVATION",
@@ -52,7 +52,7 @@ const ProductsPage = () => {
               {
                 title: "SALES ANALYTICS",
                 desc: "Gain actionable insights into your restaurant's performance.",
-                img: require("../assets/images/Image 2.jpg"),
+                img: require("../assets/images/Image 8.jpg"),
               },
               {
                 title: "INVENTORY MANAGEMENT",

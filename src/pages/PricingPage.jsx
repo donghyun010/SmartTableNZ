@@ -1,24 +1,46 @@
-// src/components/PricingPage.jsx
-import { useState } from "react";
-import "./PricingPage.css";
+import React, { useState } from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const PricingPage = () => {
   const [tabletCount, setTabletCount] = useState(0);
-  const [kioskIncluded, setKioskIncluded] = useState(false);
+  const [kioskIncluded, setKioskIncluded] = useState("No");
   const [kioskContract, setKioskContract] = useState("3month");
+  const [kioskTableCount, setKioskTableCount] = useState(0);
   const [monthlyCost, setMonthlyCost] = useState(0);
+
+  const pricingOptions = [
+    {
+      title: "Software Only Subscription",
+      price: "$150/month + $50 per tablet",
+      description:
+        "Includes all features. POS & KDS usage included. No hidden costs.",
+      color: "#00bcd4",
+    },
+    {
+      title: "Table Order Kiosk (3-Month Contract)",
+      price: "$18/week per table",
+      description: "Flexible short-term option to boost table-side efficiency.",
+      color: "#ab47bc",
+    },
+    {
+      title: "Table Order Kiosk (1-Year Contract)",
+      price: "$12/week per table",
+      description: "Best value for committed venues using self-service kiosks.",
+      color: "#26a69a",
+    },
+  ];
 
   const handleCalculate = () => {
     const baseCost = 150;
     const tabletCost = tabletCount * 50;
     let total = baseCost + tabletCost;
 
-    if (kioskIncluded) {
-      const kioskRate = kioskContract === "1year" ? 15 : 20;
-      total += kioskRate * tabletCount;
+    if (kioskIncluded === "Yes") {
+      const rate = kioskContract === "1year" ? 12 : 18;
+      const kioskCost = rate * kioskTableCount * 4; // Weekly to Monthly
+      total += kioskCost;
     }
 
     setMonthlyCost(total);
@@ -37,61 +59,55 @@ const PricingPage = () => {
         </div>
       </header>
 
-      <section className="section">
-        <h1 style={{ textAlign: "center" }}>Pricing Options</h1>
-        <div className="pricing-2x2">
-          <div className="pricing-col">
-            <div className="feature">
-              <h3>3-Month Contract</h3>
-              <p>
-                Ideal for short-term flexibility.
-                <br />
-                <strong>$20/table/week</strong>
-              </p>
-            </div>
-            <div className="feature">
-              <h3>3-Month Percentage Option</h3>
-              <p>
-                Pay as you grow.
-                <br />
-                <strong>2.0% of total weekly sales</strong>
-                <br />
-                (whichever is higher)
-              </p>
-            </div>
-          </div>
-          <div className="pricing-col">
-            <div className="feature">
-              <h3>1-Year Contract</h3>
-              <p>
-                Best value for established venues.
-                <br />
-                <strong>$15/table/week</strong>
-              </p>
-            </div>
-            <div className="feature">
-              <h3>1-Year Percentage Option</h3>
-              <p>
-                Long-term savings with flexibility.
-                <br />
-                <strong>1.5% of total weekly sales</strong>
-                <br />
-                (whichever is higher)
-              </p>
-            </div>
+      <section className="features-section">
+        <div className="content-wrapper">
+          <h2 className="section-title">Pricing Plans</h2>
+          <hr className="section-divider" />
+
+          <div className="feature-card-grid">
+            {pricingOptions.map((option, i) => (
+              <div
+                key={i}
+                className="feature-card"
+                style={{
+                  border: `2px solid ${option.color}`,
+                  borderRadius: "10px",
+                  padding: "20px",
+                  backgroundColor: "rgba(255, 255, 255, 0.02)",
+                }}
+              >
+                <div className="feature-card-text">
+                  <h3 style={{ color: option.color, marginBottom: "10px" }}>
+                    {option.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontWeight: 600,
+                      fontSize: "18px",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    {option.price}
+                  </p>
+                  <p style={{ color: "#ccc" }}>{option.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="section">
-        <h2 style={{ textAlign: "center" }}>Estimate Your Monthly Cost</h2>
-        <div className="calculator">
-          <div className="inputs">
-            <label htmlFor="tabletCount">Number of POS & KDS Tablets</label>
+        <div className="content-wrapper">
+          <h2 className="section-title">Estimate Your Monthly Cost</h2>
+          <hr className="section-divider" />
+
+          <div style={{ maxWidth: "500px", margin: "0 auto" }}>
+            <label>Number of POS & KDS Tablets</label>
             <select
-              id="tabletCount"
               value={tabletCount}
               onChange={(e) => setTabletCount(Number(e.target.value))}
+              style={inputStyle}
             >
               {[...Array(21).keys()].map((num) => (
                 <option key={num} value={num}>
@@ -100,41 +116,60 @@ const PricingPage = () => {
               ))}
             </select>
 
-            <label>
-              <input
-                type="checkbox"
-                checked={kioskIncluded}
-                onChange={(e) => setKioskIncluded(e.target.checked)}
-              />
-              Include Table Order Kiosk
-            </label>
+            <label>Include Table Order Kiosk?</label>
+            <select
+              value={kioskIncluded}
+              onChange={(e) => setKioskIncluded(e.target.value)}
+              style={inputStyle}
+            >
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
 
-            {kioskIncluded && (
-              <select
-                value={kioskContract}
-                onChange={(e) => setKioskContract(e.target.value)}
-              >
-                <option value="3month">3-Month Contract ($20/tablet)</option>
-                <option value="1year">1-Year Contract ($15/tablet)</option>
-              </select>
+            {kioskIncluded === "Yes" && (
+              <>
+                <label>Contract Period</label>
+                <select
+                  value={kioskContract}
+                  onChange={(e) => setKioskContract(e.target.value)}
+                  style={inputStyle}
+                >
+                  <option value="3month">
+                    3-Month Contract ($18/table/week)
+                  </option>
+                  <option value="1year">
+                    1-Year Contract ($12/table/week)
+                  </option>
+                </select>
+
+                <label>Number of Tables (Kiosk)</label>
+                <select
+                  value={kioskTableCount}
+                  onChange={(e) => setKioskTableCount(Number(e.target.value))}
+                  style={inputStyle}
+                >
+                  {[...Array(51).keys()].map((num) => (
+                    <option key={num} value={num}>
+                      {num}
+                    </option>
+                  ))}
+                </select>
+              </>
             )}
 
-            <button onClick={handleCalculate}>Get Your Quote</button>
-          </div>
+            <button onClick={handleCalculate} style={buttonStyle}>
+              Calculate Monthly Cost
+            </button>
 
-          <div className="result-box">
-            <div className="result-title">Your Monthly Cost</div>
-            <div className="result-value">
-              $
-              {monthlyCost.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </div>
-            <div className="result-note">
-              * This estimate is based on a 1-year contract.
-              <br />* Includes POS & KDS software, hardware, and optional Kiosk
-              system.
+            <div style={resultBoxStyle}>
+              <h3 style={{ marginBottom: "10px" }}>Your Monthly Cost</h3>
+              <p style={{ fontSize: "32px", fontWeight: "bold" }}>
+                ${monthlyCost.toFixed(2)}
+              </p>
+              <p style={{ fontSize: "14px", color: "#ccc" }}>
+                * Base includes software subscription, POS & KDS usage. Kiosk
+                charges apply only if selected.
+              </p>
             </div>
           </div>
         </div>
@@ -143,6 +178,37 @@ const PricingPage = () => {
       <Footer />
     </div>
   );
+};
+
+const inputStyle = {
+  width: "100%",
+  padding: "10px",
+  margin: "10px 0",
+  borderRadius: "5px",
+  border: "1px solid #ccc",
+  fontSize: "16px",
+};
+
+const buttonStyle = {
+  width: "100%",
+  padding: "12px",
+  backgroundColor: "#1b3662",
+  color: "white",
+  border: "none",
+  borderRadius: "8px",
+  fontSize: "16px",
+  fontWeight: "bold",
+  cursor: "pointer",
+  marginTop: "10px",
+};
+
+const resultBoxStyle = {
+  backgroundColor: "#1b3662",
+  color: "white",
+  padding: "20px",
+  marginTop: "20px",
+  borderRadius: "10px",
+  textAlign: "center",
 };
 
 export default PricingPage;
