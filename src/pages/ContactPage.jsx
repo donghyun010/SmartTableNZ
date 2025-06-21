@@ -6,7 +6,11 @@ import Footer from "./components/Footer";
 const ContactPage = () => {
   return (
     <div
-      style={{ backgroundColor: "#1b3662", color: "#fff", minHeight: "100vh" }}
+      style={{
+        background: "linear-gradient(to right, #0d1b2a, #1b3662, #3d6aa3)",
+        color: "#fff",
+        minHeight: "100vh",
+      }}
     >
       <header>
         <div className="header-box">
@@ -46,7 +50,7 @@ const ContactPage = () => {
           <div style={{ flex: "1 1 300px" }}>
             <p
               style={{
-                color: "##00bcd4",
+                color: "#00bcd4",
                 fontWeight: "500",
                 marginBottom: "10px",
               }}
@@ -76,12 +80,12 @@ const ContactPage = () => {
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
             >
               <label style={{ fontWeight: 500 }}>
-                Name<span style={{ color: "##00bcd4" }}> *</span>
+                Name<span style={{ color: "#00bcd4" }}> *</span>
               </label>
               <input type="text" name="name" required style={inputStyle} />
 
               <label style={{ fontWeight: 500 }}>
-                Email<span style={{ color: "##00bcd4" }}> *</span>
+                Email<span style={{ color: "#00bcd4" }}> *</span>
               </label>
               <input type="email" name="email" required style={inputStyle} />
 
@@ -120,7 +124,7 @@ const ContactPage = () => {
                 I agree to the Smart Table{" "}
                 <a
                   href="/privacy-policy"
-                  style={{ color: "##00bcd4", textDecoration: "underline" }}
+                  style={{ color: "#00bcd4", textDecoration: "underline" }}
                 >
                   Privacy Policy
                 </a>
@@ -155,7 +159,7 @@ const inputStyle = {
 
 const submitButtonStyle = {
   padding: "10px 20px",
-  backgroundColor: "##00bcd4",
+  backgroundColor: "#00bcd4",
   color: "#fff",
   border: "none",
   borderRadius: "5px",

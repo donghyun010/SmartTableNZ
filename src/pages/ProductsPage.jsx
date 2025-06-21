@@ -87,7 +87,8 @@ const ProductsPage = () => {
       </section>
 
       <section className="section">
-        <h2 style={{ color: "white" }}>Smart Ordering in 3 Steps</h2>
+        <h2 className="section-title">Smart Ordering in 3 Steps</h2>
+        <hr className="section-divider" />
         <ImageCarousel />
       </section>
 

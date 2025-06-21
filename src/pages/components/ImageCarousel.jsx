@@ -41,26 +41,34 @@ const ImageCarousel = () => {
       autoplay={{ delay: 5000, disableOnInteraction: false }}
       effect="coverflow"
       grabCursor
-      centeredSlides
-      loop
-      slidesPerView={window.innerWidth < 768 ? 1 : 2.5}
+      centeredSlides={true}
+      loop={false} // IMPORTANT: turn off loop to prevent extra left clone
+      slidesPerView={2.5} // Visible center + sides
       coverflowEffect={{
         rotate: 0,
-        stretch: 20, // side image spacing
-        depth: 150, // how far side images recede
-        modifier: 1.5, // overall exaggeration
-        scale: 0.8, // side images scale down
+        stretch: 0,
+        depth: 150,
+        modifier: 1.5,
+        scale: 0.9,
         slideShadows: false,
       }}
       style={{
         maxWidth: "90vw",
         margin: "auto",
         paddingBottom: "60px",
+        overflow: "visible",
       }}
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div style={{ textAlign: "center" }}>
+          <div
+            style={{
+              textAlign: "center",
+              overflow: "visible",
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}

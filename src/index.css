@@ -6,9 +6,13 @@
 }
 
 body {
-  line-height: 1.6;
-  color: #333;
+  background: linear-gradient(to right, #0d1b2a, #1b3662, #3d6aa3);
+  background-attachment: fixed;
+  background-size: cover;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -166,7 +170,6 @@ header nav a {
 }
 
 .why-smart-table {
-  background-color: #1b3662;
   padding: 80px 20px;
   width: 100%;
 }
@@ -177,7 +180,6 @@ header nav a {
 }
 
 .features-section {
-  background-color: #1b3662;
   padding: 80px 20px;
   width: 100%;
 }
@@ -233,9 +235,7 @@ header nav a {
 }
 
 footer {
-  text-align: center;
   padding: 40px 20px;
-  background-color: #1b3662;
   color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -255,8 +255,8 @@ footer {
 }
 
 .footer-column h4 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -273,7 +273,6 @@ footer {
 }
 
 .highlighted-feature {
-  background-color: #1b3662;
   padding: 80px 20px;
   width: 100%;
 }
@@ -288,7 +287,6 @@ footer {
 }
 
 .ready-to-start {
-  background-color: #1b3662;
   padding: 80px 20px;
   width: 100%;
 }
@@ -340,7 +338,9 @@ body.home-page {
 }
 
 body.plain-page {
-  background-color: #1b3662 !important;
+  background: linear-gradient(to right, #0d1b2a, #1b3662, #3d6aa3);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .section {
@@ -363,7 +363,28 @@ body.plain-page {
 }
 
 .swiper {
-  padding-top: 20px;
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  overflow: visible;
+}
+
+.swiper-slide-active {
+  z-index: 10;
+}
+
+.swiper-slide-active img {
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+  z-index: 10;
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide,
+.swiper-slide-active {
+  overflow: visible !important;
 }
 
 .feature-card-grid {
@@ -374,7 +395,7 @@ body.plain-page {
 }
 
 .feature-card {
-  background: linear-gradient(to right, #1b2a45, #1b3662);
+  background: #1b3662;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -388,11 +409,12 @@ body.plain-page {
 }
 
 .feature-card-image {
-  width: 100%;
+  width: calc(100% - 32px); /* Add horizontal padding */
   height: 180px;
   object-fit: cover;
+  border-radius: 12px;
+  margin: 16px; /* Center and space from edge */
 }
-
 .feature-card-text {
   padding: 16px;
   color: white;
@@ -407,4 +429,12 @@ body.plain-page {
   font-size: 14px;
   opacity: 0.85;
   margin: 0;
+}
+
+.footer-columns {
+  text-align: left;
+}
+.footer-column h4,
+.footer-column a {
+  text-align: left;
 }
