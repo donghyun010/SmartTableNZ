@@ -87,9 +87,26 @@ const ProductsPage = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-title">Smart Ordering in 3 Steps</h2>
-        <hr className="section-divider" />
-        <ImageCarousel />
+        <div className="content-wrapper">
+          <h2 className="section-title">Optional Add-On: Table Order Kiosk</h2>
+          <hr className="section-divider" />
+          <p>
+            Our Table Order Kiosk system transforms dining with securely mounted
+            tablets at each table. This premium solution streamlines operations,
+            speeds up service, and enhances the customer experience with
+            seamless interactive ordering.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="content-wrapper">
+          <h2 className="section-title">
+            Smart Ordering in 3 Steps Using Table Kiosk
+          </h2>
+          <hr className="section-divider" />
+          <ImageCarousel />
+        </div>
       </section>
 
       <Footer />

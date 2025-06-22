@@ -438,3 +438,13 @@ body.plain-page {
 .footer-column a {
   text-align: left;
 }
+
+.shared-section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px; /* or 16px depending on your global layout */
+}
+
+.content-wrapper {
+  margin-bottom: 80px; /* spacing between sections */
+}
