@@ -96,3 +96,47 @@
   border-radius: 16px;
   box-sizing: border-box;
 }
+
+.feature-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding-top: 32px;
+}
+
+.feature-card {
+  background: #1b3662;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card-image {
+  width: calc(100% - 32px); /* Add horizontal padding */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 16px; /* Center and space from edge */
+}
+.feature-card-text {
+  padding: 16px;
+  color: white;
+}
+
+.feature-card-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.feature-card-text p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0;
+}

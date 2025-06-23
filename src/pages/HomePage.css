@@ -3,15 +3,26 @@
   width: 100%;
   background: linear-gradient(to bottom, #000000, #0a1b36, #1b3662);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  position: relative;
   padding: 0 20px;
+}
+
+.banner-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
 }
 
 .banner-content {
   max-width: 700px;
+  margin-top: 100px; /* spacing from top header */
 }
 
 .banner-content h1 {
@@ -72,26 +83,131 @@
 }
 
 .benefit-card {
-  background: rgba(27, 54, 98, 0.85);
-  border: none;
-  border-radius: 12px;
+  background: white;
+  color: #111;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px dashed #333;
+  border-radius: 4px;
   padding: 20px;
-  text-align: left;
-  color: white;
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
   transition: transform 0.2s ease;
 }
 
 .benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
-.benefit-card h4 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+.benefit-card::before,
+.benefit-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  left: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ccc,
+    #ccc 2px,
+    transparent 2px,
+    transparent 4px
+  );
 }
 
-.benefit-card p {
-  font-size: 0.95rem;
+.benefit-card::before {
+  top: 0;
+}
+
+.benefit-card::after {
+  bottom: 0;
+}
+
+.highlighted-feature {
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.highlighted-feature .content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.highlighted-feature p {
+  color: white;
+}
+
+.ready-to-start {
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.ready-to-start .content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ready-to-start p {
+  color: white;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.demo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* or center if you want the button centered */
+}
+
+.kiosk-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.kiosk-text {
+  flex: 1 1 400px;
+}
+
+.kiosk-image {
+  flex: 1 1 400px;
+  text-align: center;
+  background: none; /* Remove background */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+  padding: 0; /* Remove extra spacing */
+}
+
+.kiosk-image img {
+  max-width: 100%;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.section-divider-curve {
+  position: relative;
+  margin-top: -1px;
+  overflow: hidden;
+  line-height: 0;
+}
+.section-divider-curve svg {
+  display: block;
+  width: 100%;
+  height: 80px;
 }

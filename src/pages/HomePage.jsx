@@ -7,18 +7,18 @@ import "./HomePage.css";
 const HomePage = () => {
   return (
     <>
-      <header>
-        <div className="header-box">
-          <nav>
-            <div className="logo">
-              <img src={logo} alt="Smart Table Logo" />
-            </div>
-            <Header />
-          </nav>
-        </div>
-      </header>
-
       <section className="full-banner">
+        <div className="banner-header">
+          <div className="header-box">
+            <nav>
+              <div className="logo">
+                <img src={logo} alt="Smart Table Logo" />
+              </div>
+              <Header />
+            </nav>
+          </div>
+        </div>
+
         <div className="banner-content">
           <h1>
             ELEVATE DINING
@@ -128,15 +128,25 @@ const HomePage = () => {
       </section>
 
       <section className="highlighted-feature">
-        <div className="content-wrapper">
-          <h2 className="section-title">Optional Add-On: Table Order Kiosk</h2>
-          <hr className="section-divider" />
-          <p>
-            Our Table Order Kiosk system transforms dining with securely mounted
-            tablets at each table. This premium solution streamlines operations,
-            speeds up service, and enhances the customer experience with
-            seamless interactive ordering.
-          </p>
+        <div className="content-wrapper kiosk-layout">
+          <div className="kiosk-text">
+            <h2 className="section-title">
+              Optional Add-On: Table Order Kiosk
+            </h2>
+            <hr className="section-divider" />
+            <p>
+              Our Table Order Kiosk system transforms dining with securely
+              mounted tablets at each table. This premium solution streamlines
+              operations, speeds up service, and enhances the customer
+              experience with seamless interactive ordering.
+            </p>
+          </div>
+          <div className="kiosk-image">
+            <img
+              src={require("../assets/images/Table Kiosk.png")}
+              alt="Table Order Kiosk"
+            />
+          </div>
         </div>
       </section>
 
