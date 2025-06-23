@@ -15,15 +15,9 @@ const ContactPage = () => {
     >
       <header>
         <div className="header-box">
-          <nav
-            style={{ display: "flex", alignItems: "center", padding: "20px" }}
-          >
+          <nav>
             <div className="logo">
-              <img
-                src={logo}
-                alt="Smart Table Logo"
-                style={{ height: "40px" }}
-              />
+              <img src={logo} alt="Smart Table Logo" />
             </div>
             <Header />
           </nav>
@@ -39,13 +33,8 @@ const ContactPage = () => {
         }}
       >
         <div
-          style={{
-            display: "flex",
-            maxWidth: "1000px",
-            width: "100%",
-            gap: "60px",
-            flexWrap: "wrap",
-          }}
+          className="content-wrapper"
+          style={{ display: "flex", gap: "60px", flexWrap: "wrap" }}
         >
           {/* Left Side */}
           <div style={{ flex: "1 1 300px" }}>

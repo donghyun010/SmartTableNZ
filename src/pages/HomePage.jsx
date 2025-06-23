@@ -7,18 +7,18 @@ import "./HomePage.css";
 const HomePage = () => {
   return (
     <>
-      <section className="full-banner">
-        <div className="banner-header">
-          <div className="header-box">
-            <nav>
-              <div className="logo">
-                <img src={logo} alt="Smart Table Logo" />
-              </div>
-              <Header />
-            </nav>
-          </div>
+      <div className="banner-header">
+        <div className="header-box">
+          <nav>
+            <div className="logo">
+              <img src={logo} alt="Smart Table Logo" />
+            </div>
+            <Header />
+          </nav>
         </div>
+      </div>
 
+      <section className="full-banner">
         <div className="banner-content">
           <h1>
             ELEVATE DINING
