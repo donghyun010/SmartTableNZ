@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./PricingPage.css";
 
 const PricingPage = () => {
   const [tabletCount, setTabletCount] = useState(0);

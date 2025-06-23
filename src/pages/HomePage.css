@@ -40,3 +40,58 @@
 .banner-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
+
+.why-smart-table {
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.why-smart-table .content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.benefit-card {
+  background: rgba(27, 54, 98, 0.85);
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+}

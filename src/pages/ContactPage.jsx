@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./ContactPage.css";
 
 const ContactPage = () => {
   return (

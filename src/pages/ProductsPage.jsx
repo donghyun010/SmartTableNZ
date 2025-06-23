@@ -2,6 +2,7 @@ import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
+import "./ProductsPage.css";
 
 const ProductsPage = () => {
   return (

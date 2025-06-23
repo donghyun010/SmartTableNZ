@@ -126,16 +126,6 @@ header nav a {
   margin-bottom: 40px;
 }
 
-.why-smart-table {
-  padding: 80px 20px;
-  width: 100%;
-}
-
-.why-smart-table .content-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .features-section {
   padding: 80px 20px;
   width: 100%;
@@ -144,51 +134,6 @@ header nav a {
 .features-section .content-wrapper {
   max-width: 1100px;
   margin: 0 auto;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.benefit-card {
-  background: rgba(27, 54, 98, 0.85);
-  border: none;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: left;
-  color: white;
-  box-shadow: none;
-  transition: transform 0.2s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.benefit-card h4 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.benefit-card p {
-  font-size: 0.95rem;
 }
 
 footer {
@@ -310,4 +255,76 @@ body.plain-page {
 .section p,
 .section strong {
   color: white;
+}
+
+.feature-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding-top: 32px;
+}
+
+.feature-card {
+  background: #1b3662;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card-image {
+  width: calc(100% - 32px); /* Add horizontal padding */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 16px; /* Center and space from edge */
+}
+.feature-card-text {
+  padding: 16px;
+  color: white;
+}
+
+.feature-card-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.feature-card-text p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.footer-columns {
+  text-align: left;
+}
+.footer-column h4,
+.footer-column a {
+  text-align: left;
+}
+
+.shared-section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px; /* or 16px depending on your global layout */
+}
+
+.content-wrapper {
+  margin-bottom: 80px; /* spacing between sections */
+}
+
+.feature-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain; /* Use contain to respect the aspect ratio of the tablet */
+  position: relative;
+  z-index: 1;
 }
