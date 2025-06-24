@@ -6,20 +6,20 @@ const Header = () => {
     <div className="nav-links">
       <Link to="/">Home</Link>
       <div className="dropdown">
-        <Link to="/products" className="dropdown-toggle">
-          Product & Services
+        <Link to="/Features" className="dropdown-toggle">
+          Features
         </Link>
         <div className="dropdown-content">
-          <Link to="/products#kiosk">Table Order Kiosk</Link>
-          <Link to="/products#pos">Point of Sales (POS)</Link>
-          <Link to="/products#kds">Kitchen Display System (KDS)</Link>
-          <Link to="/products#multiple-pos-kds">Multiple POS & KDS</Link>
-          <Link to="/products#online-ordering">Online Ordering</Link>
-          <Link to="/products#reservation">QR Ordering</Link>
-          <Link to="/products#sale-analytics">Sales Analytics</Link>
-          <Link to="/products#inventory-management">Inventory Management</Link>
-          <Link to="/products#loyalty-program">Loyalty Program</Link>
-          <Link to="/products#delivery-app-integration">
+          <Link to="/Features#pos">Point of Sales (POS)</Link>
+          <Link to="/Features#kds">Kitchen Display System (KDS)</Link>
+          <Link to="/Features#kiosk">Table Order Kiosk</Link>
+          <Link to="/Features#multiple-pos-kds">Multiple POS & KDS</Link>
+          <Link to="/Features#online-ordering">Online Ordering</Link>
+          <Link to="/Features#reservation">QR Ordering</Link>
+          <Link to="/Features#sale-analytics">Sales Analytics</Link>
+          <Link to="/Features#inventory-management">Inventory Management</Link>
+          <Link to="/Features#loyalty-program">Loyalty Program</Link>
+          <Link to="/Features#delivery-app-integration">
             Delivery App Integration
           </Link>
         </div>

@@ -1,0 +1,57 @@
+.section-header-block {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: left; /* or center if you want it */
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.section-subtitle {
+  color: #cccccc;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.feature-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pos-feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 280px;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.pos-feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #00c3ff;
+}
+
+.pos-feature-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.pos-feature-card p {
+  font-size: 0.95rem;
+  color: #dddddd;
+}
