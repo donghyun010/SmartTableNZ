@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-import ProductsPage from "./pages/ProductsPage";
+import FeaturesPage from "./pages/FeaturesPage";
 import ContactPage from "./pages/ContactPage";
 import PricingPage from "./pages/PricingPage";
 
@@ -39,7 +39,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/products*" element={<ProductsPage />} />
+        <Route path="/Features*" element={<FeaturesPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
