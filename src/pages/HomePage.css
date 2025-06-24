@@ -329,3 +329,22 @@
   border-radius: 16px;
   box-sizing: border-box;
 }
+
+/* Ensure all section content aligns left */
+.content-wrapper {
+  text-align: left;
+}
+
+/* Specifically for headings and text elements */
+.section-title,
+.section-subtitle,
+.benefit-card h4,
+.benefit-card p,
+.feature-card-text h3,
+.feature-card-text p,
+.kiosk-text p,
+.faq-question,
+.faq-answer,
+.demo-content p {
+  text-align: left;
+}

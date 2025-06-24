@@ -20,16 +20,14 @@ const FeaturesPage = () => {
 
       <section className="section pos-feature-section">
         <div className="content-wrapper">
-          <div className="section-header-block">
-            <h2 className="section-title">Point of Sales (POS)</h2>
-            <hr className="section-divider" />
-          </div>
+          <h2 className="section-title">Point of Sales (POS)</h2>
+          <hr className="section-divider" />
 
           <p className="section-subtitle">
             Tailor Smart Table to fit your restaurant’s exact needs
           </p>
 
-          <div className="feature-card-row">
+          <div className="feature-card-grid">
             {[
               {
                 title: "TABLE MANAGEMENT",

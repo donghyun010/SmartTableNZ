@@ -47,14 +47,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-.result-box {
-  background: #203e6f;
-  color: white;
-  border-radius: 15px;
-  padding: 40px 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
 .result-title {
   font-size: 28px;
   font-weight: bold;
@@ -82,4 +74,54 @@ button:hover {
   width: 100%;
   max-width: 320px;
   text-align: center;
+}
+
+.pricing-section {
+  padding: 80px 20px;
+  width: 100%;
+  background: transparent;
+}
+
+.pricing-section .content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  flex: 1 1 280px;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
+
+.pricing-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.pricing-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.pricing-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
 }

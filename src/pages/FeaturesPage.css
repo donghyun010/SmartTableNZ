@@ -1,33 +1,8 @@
-.section-header-block {
-  margin-bottom: 20px;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  text-align: left; /* or center if you want it */
-}
-
-.section-divider {
-  border: none;
-  height: 2px;
-  background-color: white;
-  width: 100%;
-  margin-top: 10px;
-}
-
 .section-subtitle {
   color: #cccccc;
-  margin-bottom: 40px;
   font-size: 1.1rem;
-}
-
-.feature-card-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .pos-feature-card {
@@ -38,6 +13,7 @@
   width: 280px;
   transition: 0.3s ease;
   color: white;
+  text-align: left;
 }
 
 .pos-feature-card:hover {
@@ -54,4 +30,8 @@
 .pos-feature-card p {
   font-size: 0.95rem;
   color: #dddddd;
+}
+
+.pos-feature-section {
+  margin-top: 120px; /* Match your nav/header height */
 }
