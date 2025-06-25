@@ -1,37 +1,86 @@
-.section-subtitle {
-  color: #cccccc;
+.features-section-subtitle {
+  color: #ffffff;
   font-size: 1.1rem;
   margin-bottom: 40px;
   text-align: left;
 }
 
-.pos-feature-card {
+.features-pos-section:first-of-type {
+  margin-top: 120px; /* or whatever space matches your other pages */
+}
+
+.features-pos-section {
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.features-card-grid {
+  display: flex;
+  justify-content: space-between; /* evenly spaced, aligned to both ends */
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.features-card {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 25px 20px;
-  width: 280px;
+  width: 320px;
+  height: 100px;
   transition: 0.3s ease;
   color: white;
   text-align: left;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  border-radius: 80px;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 
-.pos-feature-card:hover {
-  transform: translateY(-5px);
+.features-card:hover {
+  transform: scale(1.05);
   border-color: #00c3ff;
 }
 
-.pos-feature-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+.features-card-img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.features-card-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
   color: white;
+  margin: 0;
 }
 
-.pos-feature-card p {
-  font-size: 0.95rem;
-  color: #dddddd;
+.features-card-text p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 4px 0 0 0;
 }
 
-.pos-feature-section {
-  margin-top: 120px; /* Match your nav/header height */
+@media (max-width: 600px) {
+  .features-card {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .features-card-img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
 }
