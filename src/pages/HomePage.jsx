@@ -1,12 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import "./HomePage.css";
-import ClickableFeatureSection from "./components/ClickableFeatureSection";
 
 const HomePage = () => {
+  // ✅ This goes before return
+  const [selectedFeature, setSelectedFeature] = useState(null);
+
+  const featureHighlights = [
+    {
+      title: "Point of Sales (POS)",
+      img: require("../assets/images/Image 1.jpg"),
+      desc: "Create a seamless online experience with your brand front and center.",
+    },
+    {
+      title: "Kitchen Disply System",
+      img: require("../assets/images/Image 4.jpg"),
+      desc: "Give your customers more reasons to return with custom rewards.",
+    },
+    {
+      title: "Table Order Kiosk",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Multiple POS & KDS",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Online Ordering",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Online Reservation",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "QR Ordering",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Sales Analytics",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Inventory Management",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Loyalty Program",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+    {
+      title: "Delievery App Integration",
+      img: require("../assets/images/Image 6.jpg"),
+      desc: "Serve diverse communities with support for multiple languages.",
+    },
+  ];
+
   return (
     <>
       <div className="banner-header">
@@ -77,6 +137,53 @@ const HomePage = () => {
         </div>
       </section>
 
+      <section className="why-smart-table-icons">
+        <div className="content-wrapper">
+          <h2 className="section-title">Why Choose Smart Table?</h2>
+          <hr className="section-divider" />
+          <div className="smart-table-icon-grid">
+            {[
+              {
+                icon: "⚡",
+                title: "Speed Up Service",
+                desc: "Reduce wait times and serve more customers with faster, more efficient ordering and processing.",
+              },
+              {
+                icon: "💸",
+                title: "Cut Down Costs",
+                desc: "Lower your labor expenses by automating routine tasks with integrated technology.",
+              },
+              {
+                icon: "🧩",
+                title: "All-in-One System",
+                desc: "POS, KDS, QR ordering, loyalty programs, and more—all managed in a single platform.",
+              },
+              {
+                icon: "💬",
+                title: "Boost Customer Experience",
+                desc: "Interactive, contactless, and personalized—customers enjoy smooth and modern dining.",
+              },
+              {
+                icon: "📈",
+                title: "Actionable Insights",
+                desc: "Access powerful analytics to make data-driven decisions and grow your business.",
+              },
+              {
+                icon: "📦",
+                title: "Scalable & Flexible",
+                desc: "Whether you're a small cafe or a multi-location chain, Smart Table grows with you.",
+              },
+            ].map((item, i) => (
+              <div className="smart-table-icon-card" key={i}>
+                <div className="icon">{item.icon}</div>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="features-section">
         <div className="content-wrapper">
           <h2 className="section-title">Features</h2>
@@ -87,17 +194,17 @@ const HomePage = () => {
               {
                 title: "POINT OF SALES (POS)",
                 desc: "Fully customise your table layout and menu anytime – quickly, easily and exactly how you want it.",
-                img: require("../assets/images/Feature POS.png"), // <-- updated image
+                img: require("../assets/images/Feature POS.png"),
               },
               {
                 title: "KITCHEN DISPLAY SYSTEM (KDS)",
                 desc: "Seamlessly sync with the POS to simplify order management, with the flexibility to split KDS screens by section or station—customising each view to suit your workflow.",
-                img: require("../assets/images/Image 6.jpg"),
+                img: require("../assets/images/Feature KDS.png"),
               },
               {
                 title: "MULTIPLE POS & KDS",
                 desc: "Use unlimited POS & KDS devices across your venue – all included, always in sync.",
-                img: require("../assets/images/Image 7.jpg"),
+                img: require("../assets/images/Feature Sales.png"),
               },
               {
                 title: "ONLINE ORDERING & RESERVATION",
@@ -145,6 +252,40 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <section className="clickable-feature-tags">
+        <div className="content-wrapper">
+          <h2 className="section-title">Explore More Features</h2>
+          <hr className="section-divider" />
+          <div className="feature-tag-grid">
+            {featureHighlights.map((feature, index) => (
+              <button
+                key={index}
+                className="feature-tag"
+                onClick={() => setSelectedFeature(feature)}
+              >
+                {feature.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {selectedFeature && (
+        <div
+          className="feature-overlay"
+          onClick={() => setSelectedFeature(null)}
+        >
+          <div
+            className="feature-overlay-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img src={selectedFeature.img} alt={selectedFeature.title} />
+            <h2>{selectedFeature.title}</h2>
+            <p>{selectedFeature.desc}</p>
+          </div>
+        </div>
+      )}
 
       <section className="highlighted-feature">
         <div className="content-wrapper kiosk-layout">
