@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import "./HomePage.css";
+import ClickableFeatureSection from "./components/ClickableFeatureSection";
 
 const HomePage = () => {
   return (
@@ -86,7 +87,7 @@ const HomePage = () => {
               {
                 title: "POINT OF SALES (POS)",
                 desc: "Fully customise your table layout and menu anytime – quickly, easily and exactly how you want it.",
-                img: require("../assets/images/Image 5.jpg"),
+                img: require("../assets/images/Feature POS.png"), // <-- updated image
               },
               {
                 title: "KITCHEN DISPLAY SYSTEM (KDS)",
@@ -130,18 +131,11 @@ const HomePage = () => {
               },
             ].map((feature, i) => (
               <div className="feature-card" key={i}>
-                <div className="tablet-frame-wrapper">
-                  <img
-                    src={feature.img}
-                    alt={feature.title}
-                    className="feature-card-image"
-                  />
-                  <img
-                    src={require("../assets/images/tablet-frame.jpg")}
-                    alt="Tablet Frame"
-                    className="tablet-frame-overlay"
-                  />
-                </div>
+                <img
+                  src={feature.img}
+                  alt={feature.title}
+                  className="feature-card-image"
+                />
                 <div className="feature-card-text">
                   <h3>{feature.title}</h3>
                   <p>{feature.desc}</p>
