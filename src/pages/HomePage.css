@@ -331,30 +331,31 @@
 .feature-tag-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px 16px;
   justify-content: center;
   padding: 20px 0;
 }
 
 .feature-tag {
-  display: inline-block; /* ✅ Let content decide width */
-  width: auto; /* ✅ Prevent full width */
-  background-color: #f2f6fc;
-  color: #001f3f;
-  padding: 10px 16px;
-  font-size: 0.95rem;
+  display: inline-block;
+  width: auto;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 20px;
+  font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 12px;
-  border: none;
+  border-radius: 40px;
   cursor: pointer;
   white-space: nowrap;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
 .feature-tag:hover {
-  background-color: #dceaff;
+  background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .feature-overlay {
@@ -402,7 +403,7 @@
 
 .smart-table-icon-card .icon {
   font-size: 36px;
-  background-color: #7a5fff;
+  background-color: #4f9dff;
   color: white;
   border-radius: 12px;
   padding: 15px;
@@ -420,4 +421,24 @@
 .smart-table-icon-card p {
   font-size: 0.95rem;
   color: #ffffff;
+}
+
+.selected-feature-display {
+  margin-top: 40px;
+  background-color: transaprent;
+  border-radius: 12px;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.selected-feature-image {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }

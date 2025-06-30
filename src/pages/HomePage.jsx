@@ -21,11 +21,6 @@ const HomePage = () => {
       desc: "Give your customers more reasons to return with custom rewards.",
     },
     {
-      title: "Table Order Kiosk",
-      img: require("../assets/images/Image 6.jpg"),
-      desc: "Serve diverse communities with support for multiple languages.",
-    },
-    {
       title: "Multiple POS & KDS",
       img: require("../assets/images/Image 6.jpg"),
       desc: "Serve diverse communities with support for multiple languages.",
@@ -97,49 +92,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="why-smart-table">
-        <div className="content-wrapper">
-          <h2 className="section-title">Why Choose Smart Table?</h2>
-          <hr className="section-divider" />
-          <div className="benefits-grid">
-            {[
-              {
-                title: "Speed Up Service",
-                desc: "Reduce wait times and serve more customers with faster, more efficient ordering and processing.",
-              },
-              {
-                title: "Cut Down Costs",
-                desc: "Lower your labor expenses by automating routine tasks with integrated technology.",
-              },
-              {
-                title: "All-in-One System",
-                desc: "POS, KDS, QR ordering, loyalty programs, and more—all managed in a single platform.",
-              },
-              {
-                title: "Boost Customer Experience",
-                desc: "Interactive, contactless, and personalized—customers enjoy smooth and modern dining.",
-              },
-              {
-                title: "Actionable Insights",
-                desc: "Access powerful analytics to make data-driven decisions and grow your business.",
-              },
-              {
-                title: "Scalable & Flexible",
-                desc: "Whether you're a small cafe or a multi-location chain, Smart Table grows with you.",
-              },
-            ].map((benefit, i) => (
-              <div className="benefit-card" key={i}>
-                <h4>{benefit.title}</h4>
-                <p>{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="why-smart-table-icons">
         <div className="content-wrapper">
-          <h2 className="section-title">Why Choose Smart Table?</h2>
+          <h2 className="section-title">Why choose SMART TABLE?</h2>
           <hr className="section-divider" />
           <div className="smart-table-icon-grid">
             {[
@@ -184,78 +139,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="features-section">
-        <div className="content-wrapper">
-          <h2 className="section-title">Features</h2>
-          <hr className="section-divider" />
-
-          <div className="feature-card-grid">
-            {[
-              {
-                title: "POINT OF SALES (POS)",
-                desc: "Fully customise your table layout and menu anytime – quickly, easily and exactly how you want it.",
-                img: require("../assets/images/Feature POS.png"),
-              },
-              {
-                title: "KITCHEN DISPLAY SYSTEM (KDS)",
-                desc: "Seamlessly sync with the POS to simplify order management, with the flexibility to split KDS screens by section or station—customising each view to suit your workflow.",
-                img: require("../assets/images/Feature KDS.png"),
-              },
-              {
-                title: "MULTIPLE POS & KDS",
-                desc: "Use unlimited POS & KDS devices across your venue – all included, always in sync.",
-                img: require("../assets/images/Feature Sales.png"),
-              },
-              {
-                title: "ONLINE ORDERING & RESERVATION",
-                desc: "Online ordering and reservation integrated with POS & KDS.",
-                img: require("../assets/images/Image 4.jpg"),
-              },
-              {
-                title: "QR ORDERING",
-                desc: "Contactless table-side ordering integrated with POS & KDS.",
-                img: require("../assets/images/Image 1.jpg"),
-              },
-              {
-                title: "SALES ANALYTICS",
-                desc: "Gain actionable insights into your restaurant's performance.",
-                img: require("../assets/images/Image 8.jpg"),
-              },
-              {
-                title: "INVENTORY MANAGEMENT",
-                desc: "Manage your stock easily.",
-                img: require("../assets/images/Image 3.jpg"),
-              },
-              {
-                title: "LOYALTY PROGRAM",
-                desc: "Custom loyalty and voucher tools for customers, staff, and companies.",
-                img: require("../assets/images/Image 4.jpg"),
-              },
-              {
-                title: "DELIVERY SERVICES",
-                desc: "Integrated delivery services including Uber Eats and DoorDash.",
-                img: require("../assets/images/Image 1.jpg"),
-              },
-            ].map((feature, i) => (
-              <div className="feature-card" key={i}>
-                <img
-                  src={feature.img}
-                  alt={feature.title}
-                  className="feature-card-image"
-                />
-                <div className="feature-card-text">
-                  <h3>{feature.title}</h3>
-                  <p>{feature.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="clickable-feature-tags">
         <div className="content-wrapper">
-          <h2 className="section-title">Explore More Features</h2>
+          <h2 className="section-title">Basic Features</h2>
           <hr className="section-divider" />
           <div className="feature-tag-grid">
             {featureHighlights.map((feature, index) => (
@@ -272,18 +158,14 @@ const HomePage = () => {
       </section>
 
       {selectedFeature && (
-        <div
-          className="feature-overlay"
-          onClick={() => setSelectedFeature(null)}
-        >
-          <div
-            className="feature-overlay-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img src={selectedFeature.img} alt={selectedFeature.title} />
-            <h2>{selectedFeature.title}</h2>
-            <p>{selectedFeature.desc}</p>
-          </div>
+        <div className="selected-feature-display">
+          <img
+            src={selectedFeature.img}
+            alt={selectedFeature.title}
+            className="selected-feature-image"
+          />
+          <h2>{selectedFeature.title}</h2>
+          <p>{selectedFeature.desc}</p>
         </div>
       )}
 
