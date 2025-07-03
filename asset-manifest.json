@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SmartTableNZ/static/css/main.51c687ff.css",
-    "main.js": "/SmartTableNZ/static/js/main.57222e30.js",
+    "main.css": "/SmartTableNZ/static/css/main.f8425aeb.css",
+    "main.js": "/SmartTableNZ/static/js/main.596f5bef.js",
     "static/js/453.2e38ae9d.chunk.js": "/SmartTableNZ/static/js/453.2e38ae9d.chunk.js",
     "static/media/Image 6.jpg": "/SmartTableNZ/static/media/Image 6.b77a47817d9354c6c65d.jpg",
     "static/media/Table Kiosk.png": "/SmartTableNZ/static/media/Table Kiosk.cbb5c02d91ac11b7746d.png",
@@ -17,12 +17,12 @@
     "static/media/POS Image 1.png": "/SmartTableNZ/static/media/POS Image 1.b3032cc3eae2400f5436.png",
     "static/media/KDS Image 3.png": "/SmartTableNZ/static/media/KDS Image 3.50ba3b5c94208737e36a.png",
     "index.html": "/SmartTableNZ/index.html",
-    "main.51c687ff.css.map": "/SmartTableNZ/static/css/main.51c687ff.css.map",
-    "main.57222e30.js.map": "/SmartTableNZ/static/js/main.57222e30.js.map",
+    "main.f8425aeb.css.map": "/SmartTableNZ/static/css/main.f8425aeb.css.map",
+    "main.596f5bef.js.map": "/SmartTableNZ/static/js/main.596f5bef.js.map",
     "453.2e38ae9d.chunk.js.map": "/SmartTableNZ/static/js/453.2e38ae9d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51c687ff.css",
-    "static/js/main.57222e30.js"
+    "static/css/main.f8425aeb.css",
+    "static/js/main.596f5bef.js"
   ]
 }
