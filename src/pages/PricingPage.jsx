@@ -20,16 +20,16 @@ const PricingPage = () => {
       color: "#00bcd4",
     },
     {
-      title: "Table Order Kiosk (3-Month Contract)",
-      price: "$75/month per table",
-      description: "Flexible short-term option to boost table-side efficiency.",
-      color: "#ab47bc",
-    },
-    {
       title: "Table Order Kiosk (1-Year Contract)",
-      price: "$50/month per table",
+      price: "$40/month per table",
       description: "Best value for committed venues using self-service kiosks.",
       color: "#26a69a",
+    },
+    {
+      title: "Table Order Kiosk (3-Month Contract)",
+      price: "$60/month per table",
+      description: "Flexible short-term option to boost table-side efficiency.",
+      color: "#ab47bc",
     },
   ];
 
@@ -39,7 +39,7 @@ const PricingPage = () => {
     let total = baseCost + tabletCost;
 
     if (kioskIncluded === "Yes") {
-      const rate = kioskContract === "1year" ? 50 : 75;
+      const rate = kioskContract === "1year" ? 40 : 60;
       const kioskCost = rate * kioskTableCount;
       total += kioskCost;
     }
@@ -146,10 +146,10 @@ const PricingPage = () => {
                     style={inputStyle}
                   >
                     <option value="3month">
-                      3-Month Contract ($75/table/month)
+                      3-Month Contract ($60/table/month)
                     </option>
                     <option value="1year">
-                      1-Year Contract ($50/table/month)
+                      1-Year Contract ($40/table/month)
                     </option>
                   </select>
 

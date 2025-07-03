@@ -6,9 +6,6 @@ import ImageCarousel from "./components/ImageCarousel";
 import "./HomePage.css";
 
 const HomePage = () => {
-  // ✅ This goes before return
-  const [selectedFeature, setSelectedFeature] = useState(null);
-
   const featureHighlights = [
     {
       title: "Point of Sales (POS)",
@@ -61,6 +58,8 @@ const HomePage = () => {
       desc: "Serve diverse communities with support for multiple languages.",
     },
   ];
+
+  const [selectedFeature, setSelectedFeature] = useState(featureHighlights[0]);
 
   return (
     <>
