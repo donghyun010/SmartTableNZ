@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
-          <h4>Products & Services</h4>
+          <h4>Features</h4>
           <HashLink smooth to="/#table-order-kiosk">
             Table Order Kiosk
           </HashLink>

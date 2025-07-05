@@ -36,11 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-body.home-page {
-  background: linear-gradient(to bottom, #000000, #0a1b36, #1b3662);
-}
-
-body.plain-page {
-  background: #1b3662;
-}

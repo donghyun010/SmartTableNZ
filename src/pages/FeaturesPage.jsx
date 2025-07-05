@@ -3,81 +3,14 @@ import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import image1 from "../assets/images/POS Image 1.png";
-import image2 from "../assets/images/POS Image 2.png";
-import image3 from "../assets/images/POS Image 3.png";
-import kdsImage1 from "../assets/images/KDS Image 1.png";
-import kdsImage2 from "../assets/images/KDS Image 2.png";
-import kdsImage3 from "../assets/images/KDS Image 3.png";
 import Image10 from "../assets/images/Image 1.jpg";
 import Image11 from "../assets/images/Image 2.jpg";
 
 import "./FeaturesPage.css";
 
-const tabFeatures = {
-  operations: [
-    {
-      title: "POS & KDS Syncing",
-      content:
-        "Real-time communication between POS and kitchen systems for order accuracy.",
-    },
-    {
-      title: "Sales & Analytics",
-      content:
-        "Access daily reports and performance insights to make better decisions.",
-    },
-    {
-      title: "Inventory Management",
-      content:
-        "Track ingredients and item availability to avoid shortages and waste.",
-    },
-    {
-      title: "Delivery Integration",
-      content:
-        "Connect with platforms like Uber Eats or DoorDash to fulfill delivery orders.",
-    },
-  ],
-  front: [
-    {
-      title: "QR Code Ordering",
-      content:
-        "Allow customers to scan and order directly from the table using their phones.",
-    },
-    {
-      title: "Online Ordering",
-      content: "Let customers place takeout orders from your website or app.",
-    },
-    {
-      title: "Online Reservations",
-      content:
-        "Allow diners to book tables online with real-time availability.",
-    },
-  ],
-  addons: [
-    {
-      title: "Loyalty Program",
-      content:
-        "Encourage repeat visits with point-based rewards and member-exclusive deals.",
-    },
-  ],
-};
-
 const FeaturesPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [activeTab, setActiveTab] = useState("operations");
-  const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const posFeatures = [
-    { title: "TABLE MANAGEMENT", image: image1 },
-    { title: "MENU CUSTOMISATION", image: image2 },
-    { title: "SYNC WITH KDS", image: image3 },
-  ];
-
-  const kdsFeatures = [
-    { title: "ORDER MANAGEMENT", image: kdsImage1 },
-    { title: "MULTIPLE KDS", image: kdsImage2 },
-    { title: "SYNC WITH POS", image: kdsImage3 },
-  ];
 
   return (
     <>
@@ -92,240 +25,340 @@ const FeaturesPage = () => {
         </div>
       </div>
 
-      <section className="features-pos-section">
-        <div className="content-wrapper">
-          <h2 className="section-title">Point of Sales (POS)</h2>
-          <hr className="section-divider" />
-          <p className="features-section-subtitle">
-            TAILOR SMART TABLE TO FIT YOUR RESTAURANT'S EXACT NEEDS
-          </p>
-
-          <div className="features-card-grid">
-            {posFeatures.map((item, i) => (
-              <div className="features-card" key={i}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="features-card-img"
-                />
-                <div className="features-card-text">
-                  <h4>{item.title}</h4>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="segmented-tab-wrapper" style={{ marginTop: "80px" }}>
+        <div className="segmented-tab-background">
+          {[
+            { key: "operations", label: "Restaurant Operations" },
+            { key: "front", label: "Front-of-House Features" },
+            { key: "addons", label: "Optional Add-Ons" },
+          ].map((tab) => (
+            <button
+              key={tab.key}
+              className={`segmented-tab-button ${
+                activeTab === tab.key ? "active" : ""
+              }`}
+              onClick={() => setActiveTab(tab.key)}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
-      </section>
 
-      <section className="features-kds-section">
-        <div className="content-wrapper">
-          <h2 className="section-title">Kitchen Display System (KDS)</h2>
-          <hr className="section-divider" />
-          <p className="features-section-subtitle">
-            STREAMLINE BACK-OF-HOUSE OPERATIONS WITH DIGITAL SCREENS – NO MORE
-            PAPER DOCKETS
-          </p>
-
-          <div className="features-card-grid">
-            {kdsFeatures.map((item, i) => (
-              <div className="features-card" key={i}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="features-card-img"
-                />
-                <div className="features-card-text">
-                  <h4>{item.title}</h4>
-                </div>
+        <div className="segmented-tab-features">
+          {{
+            operations: [
+              {
+                title: "Point of Sales (POS)",
+                content:
+                  "A powerful point-of-sale system designed for speed, ease, and flexibility.",
+                image: Image10,
+                subFeatures: [
+                  {
+                    title: "Table Management",
+                    content:
+                      "Manage tables visually, update availability in real-time, and improve front-of-house efficiency.",
+                  },
+                  {
+                    title: "Menu Customisation",
+                    content:
+                      "Create unique menu layouts, hide/show items, and tailor selections to different times or areas.",
+                  },
+                  {
+                    title: "Sync With KDS",
+                    content:
+                      "Orders flow instantly to the kitchen with no delay or confusion.",
+                  },
+                  {
+                    title: "Multiple Payment Methods",
+                    content:
+                      "Accept EFTPOS, QR Pay, cash, and split payments with a seamless checkout experience.",
+                  },
+                ],
+              },
+              {
+                title: "Kitchen Display System (KDS)",
+                content:
+                  "Streamline Back-of-House operations with digital screens - No more paper dockets",
+                image: Image11,
+                subFeatures: [
+                  {
+                    title: "Order Management",
+                    content:
+                      "Customise what's displayed and track prep time for every order.",
+                  },
+                  {
+                    title: "Multiple KDS",
+                    content:
+                      "Customise menu view for each KDS by section or station.",
+                  },
+                  {
+                    title: "Sync With POS",
+                    content:
+                      "Real-time sync with POS ensures accuracy and eliminates confusion.",
+                  },
+                ],
+              },
+              {
+                title: "Multiple Syncing POS/KDS",
+                content:
+                  "Use unlimited POS and KDS devices across your venue - Always in syce",
+                image: Image10,
+                subFeatures: [
+                  {
+                    title: "Multi-Terminal POS & KDS Sync",
+                    content:
+                      "Run multiple POS and KDS setups across your venue with full sync",
+                  },
+                  {
+                    title: "Station-Specific KDS Assignment",
+                    content:
+                      "Assign KDS screens to individual kitchen stations for better workflow.",
+                  },
+                  {
+                    title: "Tailored Sync for Your Workflow",
+                    content:
+                      "Control how POS and KDS sync, based on your restaurant’s flow.",
+                  },
+                ],
+              },
+              {
+                title: "Sales and Analytics",
+                content:
+                  "Gain Actionable Insights into your restaurant's performance",
+                image: Image10,
+                subFeatures: [
+                  {
+                    title: "Total Sales & Number of orders",
+                  },
+                  {
+                    title: "Average daily sales and order value",
+                  },
+                  {
+                    title: "Best Selling categories and menu items",
+                  },
+                  {
+                    title:
+                      "Sales breakdown: Dine-in, Pickup, Delievery, card and cash",
+                  },
+                  {
+                    title:
+                      "Total discounts applied, loyalty rewards redeemed, refunds and voided orders",
+                  },
+                  {
+                    title: "Sales and order trends by time of day",
+                  },
+                ],
+              },
+              {
+                title: "Inventory Management",
+                content:
+                  "Keep track of stock, ingredients, and suppliers from one dashboard.",
+                image: Image10,
+                subFeatures: [
+                  {
+                    title: "Stock Management",
+                    content:
+                      "Customise what's displayed and track prep time for every order.",
+                  },
+                  {
+                    title: "Auto Alarm System",
+                    content:
+                      "Customise menu view for each KDS by section or station.",
+                  },
+                  {
+                    title: "Sync With POS",
+                    content:
+                      "Real-time sync with POS ensures accuracy and eliminates confusion.",
+                  },
+                ],
+              },
+            ],
+            front: [
+              {
+                title: "Online Ordering",
+                content: "Oneline Ordering Integrated with POS & KDS",
+                image: Image10,
+                subFeatures: [
+                  {
+                    title:
+                      "Customers place order via your webiste or delivery app",
+                  },
+                  {
+                    title:
+                      "Orders are instantly sent to POS and KDS tagged for Pickup & Delivery",
+                  },
+                  {
+                    title:
+                      "Staff manage orders and payment directly from POS system or Delivery App",
+                  },
+                ],
+              },
+              {
+                title: "Online Reservations",
+                content:
+                  "Enable guests to book tables from your website or partner platforms.",
+                image: "../assets/images/feature-7.jpg",
+                subFeatures: [
+                  {
+                    title:
+                      "Customers book online via the Smart Table site, linked directly to your website",
+                  },
+                  {
+                    title:
+                      "Reservations instatnly pop-up on your Reservation Dashboard",
+                  },
+                  {
+                    title:
+                      "Easily manage the day's seating plan through the POS system",
+                  },
+                ],
+              },
+              {
+                title: "QR Code Ordering",
+                content:
+                  "Guests can scan, view the menu, and order directly from their table.",
+                image: "../assets/images/feature-8.jpg",
+                subFeatures: [
+                  {
+                    title:
+                      "Customers place their order from a touchscreen kiosk or QR Code at their table",
+                  },
+                  {
+                    title: "Orders are instantly sent to POS and KDS",
+                  },
+                  {
+                    title:
+                      "Restaurant management and payments are handled via the POS system",
+                  },
+                ],
+              },
+              {
+                title: "Loyalty Program",
+                content:
+                  "Custom loyalty and voucher tools for customers, staff and companies.",
+                image: "../assets/images/feature-9.jpg",
+                subFeatures: [
+                  {
+                    title: "Loyalty for Regulars or Companies",
+                    content:
+                      "Add frequent customers or businesses into the POS system with a loyalty balance they can spend as cash.",
+                  },
+                  {
+                    title: "Voucher Management",
+                    content:
+                      "Custom input of vouchers function as store credit.",
+                  },
+                  {
+                    title: "Staff Discount",
+                    content:
+                      "Assign preconfigured credit or discount allowances to staff members.",
+                  },
+                ],
+              },
+              {
+                title: "Delivery Service Integration",
+                content:
+                  "Sync with platforms like Uber Eats or DoorDash with minimal setup.",
+                image: "../assets/images/feature-10.jpg",
+                subFeatures: [
+                  {
+                    title:
+                      "No more additional tablets for different Delivery apps.",
+                  },
+                  {
+                    title: "No manual setup - we connect it all for you.",
+                  },
+                  {
+                    title:
+                      "All delivery orders automatically sync with your POS & KDS",
+                  },
+                ],
+              },
+            ],
+            addons: [
+              {
+                title: "Table Order Kiosk",
+                content:
+                  "Mountable touchscreen kiosks that let customers order directly at their table.",
+                image: "../assets/images/feature-11.jpg",
+                subFeatures: [
+                  {
+                    title: "Table Management",
+                    content:
+                      "Manage tables visually, update availability in real-time, and improve front-of-house efficiency.",
+                  },
+                  {
+                    title: "Menu Customisation",
+                    content:
+                      "Create unique menu layouts, hide/show items, and tailor selections to different times or areas.",
+                  },
+                  {
+                    title: "Sync With KDS",
+                    content:
+                      "Orders flow instantly to the kitchen with no delay or confusion.",
+                  },
+                  {
+                    title: "Multiple Payment Methods",
+                    content:
+                      "Accept EFTPOS, QR Pay, cash, and split payments with a seamless checkout experience.",
+                  },
+                ],
+              },
+            ],
+          }[activeTab].map((feature, index) => (
+            <div
+              key={index}
+              className={`feature-split-row ${
+                index % 2 === 0 ? "normal" : "reverse"
+              }`}
+            >
+              <div className="feature-split-image">
+                <img src={feature.image} alt={feature.title} />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="features-tabs-section">
-        <div className="content-wrapper">
-          <h2 className="features-tab-title">Smart Table Features Overview</h2>
+              <div className="feature-split-text">
+                <h3>{feature.title}</h3>
+                <p>{feature.content}</p>
 
-          <div className="features-tab-buttons">
-            {["operations", "front", "addons"].map((tab) => (
-              <button
-                key={tab}
-                className={`tab-button ${activeTab === tab ? "active" : ""}`}
-                onClick={() => {
-                  setActiveTab(tab);
-                  setExpandedIndex(null); // Reset expansion when switching tab
-                }}
-              >
-                {
-                  {
-                    operations: "Restaurant Operations",
-                    front: "Front-of-House Features",
-                    addons: "Optional Add-ons",
-                  }[tab]
-                }
-              </button>
-            ))}
-          </div>
-
-          <div className="features-tab-content-row">
-            {/* Left Side Image */}
-            <div className="tab-image">
-              <img
-                src={
-                  {
-                    operations: Image10,
-                    front: Image11,
-                    addons: Image11,
-                  }[activeTab]
-                }
-                alt="Tab Feature Visual"
-              />
+                {feature.subFeatures &&
+                  feature.subFeatures.map((sub, subIndex) => {
+                    const isOpen = openIndex === `${index}-${subIndex}`;
+                    return (
+                      <div
+                        key={subIndex}
+                        className={`accordion-item ${isOpen ? "open" : ""}`}
+                        onClick={() =>
+                          setOpenIndex(isOpen ? null : `${index}-${subIndex}`)
+                        }
+                      >
+                        <div className="accordion-header">
+                          <span className="icon-left">
+                            {feature.title === "Online Ordering" ||
+                            feature.title === "Online Reservations" ||
+                            feature.title === "QR Code Ordering"
+                              ? `${subIndex + 1}.`
+                              : "✔"}
+                          </span>
+                          <span className="accordion-title">{sub.title}</span>
+                          {sub.content && (
+                            <span
+                              className={`icon-right ${
+                                isOpen ? "rotated" : ""
+                              }`}
+                            >
+                              ›
+                            </span>
+                          )}
+                        </div>
+                        {isOpen && (
+                          <div className="accordion-content">{sub.content}</div>
+                        )}
+                      </div>
+                    );
+                  })}
+              </div>
             </div>
-
-            {/* Right Side Accordion Content */}
-            <div className="tab-text-block">
-              <h3 className="tab-subtitle">
-                {
-                  {
-                    operations: "Robust Restaurant Management Tools",
-                    front: "A Customer-Centric Approach",
-                    addons: "Expand Your Capabilities",
-                  }[activeTab]
-                }
-              </h3>
-
-              {tabFeatures[activeTab].map((feature, i) => (
-                <div
-                  key={i}
-                  className={`accordion-item ${
-                    expandedIndex === i ? "open" : ""
-                  }`}
-                  onClick={() =>
-                    setExpandedIndex(expandedIndex === i ? null : i)
-                  }
-                >
-                  <div className="accordion-header">
-                    <span className="icon-left">✔</span>
-                    <span className="accordion-title">{feature.title}</span>
-                    <span className="icon-right">
-                      {expandedIndex === i ? "▾" : "▸"}
-                    </span>
-                  </div>
-                  {expandedIndex === i && (
-                    <div className="accordion-content">{feature.content}</div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="features-split-section">
-        <div className="content-wrapper feature-row">
-          <div className="feature-image-block">
-            <img
-              src={Image10}
-              alt="POS Interface"
-              className="feature-side-image"
-            />
-          </div>
-
-          <div className="feature-text-block center-text-block">
-            <h2>Point of Sales (POS)</h2>
-            {[
-              {
-                title: "Table Management",
-                content:
-                  "Manage tables visually, update availability in real-time, and improve front-of-house efficiency.",
-              },
-              {
-                title: "Menu Customisation",
-                content:
-                  "Create unique menu layouts, hide/show items, and tailor selections to different times or areas.",
-              },
-              {
-                title: "Sync With KDS",
-                content:
-                  "Orders flow instantly to the kitchen with no delay or confusion.",
-              },
-              {
-                title: "Multiple Payment Methods",
-                content:
-                  "Accept EFTPOS, QR Pay, cash, and split payments with a seamless checkout experience.",
-              },
-            ].map((item, index) => (
-              <div
-                className={`accordion-item ${
-                  openIndex === index ? "open" : ""
-                }`}
-                key={index}
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <div className="accordion-header">
-                  <span className="icon-left">✔</span>
-                  <span className="accordion-title">{item.title}</span>
-                  <span className="icon-right">&#8250;</span>
-                </div>
-                {openIndex === index && (
-                  <div className="accordion-content">{item.content}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="features-split-section">
-        <div className="content-wrapper feature-row">
-          <div className="feature-text-block center-text-block">
-            <h2>Kitchen Display System (KDS)</h2>
-            {[
-              {
-                title: "Order Management",
-                content:
-                  "Track all incoming orders clearly and manage them in real-time.",
-              },
-              {
-                title: "Multiple KDS",
-                content:
-                  "Assign different screens for different sections – e.g., grill, bar, or dessert.",
-              },
-              {
-                title: "Sync With POS",
-                content:
-                  "Seamless order transmission from front-of-house to kitchen screens.",
-              },
-            ].map((item, index) => (
-              <div
-                className={`accordion-item ${
-                  openIndex === index + 4 ? "open" : ""
-                }`} // offset by 4
-                key={index + 4}
-                onClick={() =>
-                  setOpenIndex(openIndex === index + 4 ? null : index + 4)
-                }
-              >
-                <div className="accordion-header">
-                  <span className="icon-left">✔</span>
-                  <span className="accordion-title">{item.title}</span>
-                  <span className="icon-right">&#8250;</span>
-                </div>
-                {openIndex === index + 4 && (
-                  <div className="accordion-content">{item.content}</div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="feature-image-block">
-            <img
-              src={Image11}
-              alt="KDS Interface"
-              className="feature-side-image"
-            />
-          </div>
+          ))}
         </div>
       </section>
 
