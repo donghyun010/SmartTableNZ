@@ -265,8 +265,8 @@ const HomePage = () => {
 
           <div className="demo-content">
             <p>
-              Book a free demo with us today and see how Smart Table can
-              transform your operations.
+              Contact us today and see how Smart Table can transform your
+              operations.
             </p>
             <a
               href="/contact"
