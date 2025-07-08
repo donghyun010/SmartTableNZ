@@ -3,6 +3,8 @@ import logo from "../assets/images/DarkLogo.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Image10 from "../assets/images/Image 1.jpg";
 import Image11 from "../assets/images/Image 2.jpg";
@@ -12,7 +14,21 @@ import "./FeaturesPage.css";
 
 const FeaturesPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState("operations");
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (["operations", "front", "addons"].includes(hash)) {
+      setActiveTab(hash);
+      const el = document.getElementById("feature-tabs");
+      if (el) {
+        const yOffset = -80; // match your scroll offset
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -28,6 +44,9 @@ const FeaturesPage = () => {
       </div>
 
       <section className="segmented-tab-wrapper" style={{ marginTop: "80px" }}>
+        {activeTab === "operations" && <div id="restaurant-operations" />}
+        {activeTab === "front" && <div id="front-of-house" />}
+        {activeTab === "addons" && <div id="optional-addons" />}
         <div className="segmented-tab-background">
           {[
             { key: "operations", label: "Restaurant Operations" },

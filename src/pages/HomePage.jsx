@@ -91,7 +91,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="why-smart-table-icons">
+      <section id="why" className="why-smart-table-icons">
         <div className="content-wrapper">
           <h2 className="section-title">Why choose SMART TABLE?</h2>
           <hr className="section-divider" />
@@ -138,9 +138,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="clickable-feature-tags">
+      <section id="features" className="clickable-feature-tags">
         <div className="content-wrapper">
-          <h2 className="section-title">Basic Features</h2>
+          <h2 className="section-title">Features</h2>
           <hr className="section-divider" />
           <div className="feature-tag-grid">
             {featureHighlights.map((feature, index) => (
@@ -168,7 +168,7 @@ const HomePage = () => {
         </div>
       )}
 
-      <section className="highlighted-feature">
+      <section id="optional-addon" className="highlighted-feature">
         <div className="content-wrapper kiosk-layout">
           <div className="kiosk-text">
             <h2 className="section-title">
@@ -191,7 +191,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="section">
+      <section id="kiosk-steps" className="section">
         <div className="content-wrapper">
           <h2 className="section-title">
             Smart Ordering in 3 Steps Using Table Kiosk
@@ -201,7 +201,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="section">
+      <section id="faq" className="section">
         <div className="content-wrapper">
           <h2 className="section-title">FAQ on Table Kiosk</h2>
           <hr className="section-divider" />
