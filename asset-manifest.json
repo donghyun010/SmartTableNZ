@@ -1,9 +1,16 @@
 {
   "files": {
-    "main.css": "/SmartTableNZ/static/css/main.e04537aa.css",
-    "main.js": "/SmartTableNZ/static/js/main.61d65696.js",
+    "main.css": "/SmartTableNZ/static/css/main.6c69aec2.css",
+    "main.js": "/SmartTableNZ/static/js/main.3de7a659.js",
     "static/js/453.2e38ae9d.chunk.js": "/SmartTableNZ/static/js/453.2e38ae9d.chunk.js",
-    "static/media/Image 6.jpg": "/SmartTableNZ/static/media/Image 6.b77a47817d9354c6c65d.jpg",
+    "static/media/KDS.png": "/SmartTableNZ/static/media/KDS.be35b852d408078a6dd4.png",
+    "static/media/2.png": "/SmartTableNZ/static/media/2.3294cf99eb4425432860.png",
+    "static/media/POS.png": "/SmartTableNZ/static/media/POS.69a4f25ed386f6794f45.png",
+    "static/media/1.png": "/SmartTableNZ/static/media/1.ee0ecf4e8d96331a2bd0.png",
+    "static/media/3.png": "/SmartTableNZ/static/media/3.008853cd763470114fe9.png",
+    "static/media/Loyalty.png": "/SmartTableNZ/static/media/Loyalty.40083b689d04eaa3eaaa.png",
+    "static/media/POS Screen with Tablet.png": "/SmartTableNZ/static/media/POS Screen with Tablet.1829586443d5909777fd.png",
+    "static/media/Sales.png": "/SmartTableNZ/static/media/Sales.dd3545e753d93d30501e.png",
     "static/media/Table Kiosk.png": "/SmartTableNZ/static/media/Table Kiosk.cbb5c02d91ac11b7746d.png",
     "static/media/DarkLogo.png": "/SmartTableNZ/static/media/DarkLogo.887a0f09ada4ce171cd5.png",
     "static/media/Image 1.jpg": "/SmartTableNZ/static/media/Image 1.a2a28c5449f8375e764b.jpg",
@@ -11,12 +18,12 @@
     "static/media/Image 2.jpg": "/SmartTableNZ/static/media/Image 2.416cf8782005f9aafea2.jpg",
     "static/media/Image 4.jpg": "/SmartTableNZ/static/media/Image 4.d40973a9312c1fa94f2f.jpg",
     "index.html": "/SmartTableNZ/index.html",
-    "main.e04537aa.css.map": "/SmartTableNZ/static/css/main.e04537aa.css.map",
-    "main.61d65696.js.map": "/SmartTableNZ/static/js/main.61d65696.js.map",
+    "main.6c69aec2.css.map": "/SmartTableNZ/static/css/main.6c69aec2.css.map",
+    "main.3de7a659.js.map": "/SmartTableNZ/static/js/main.3de7a659.js.map",
     "453.2e38ae9d.chunk.js.map": "/SmartTableNZ/static/js/453.2e38ae9d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e04537aa.css",
-    "static/js/main.61d65696.js"
+    "static/css/main.6c69aec2.css",
+    "static/js/main.3de7a659.js"
   ]
 }
