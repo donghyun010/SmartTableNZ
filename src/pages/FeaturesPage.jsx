@@ -6,9 +6,13 @@ import ImageCarousel from "./components/ImageCarousel";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Image10 from "../assets/images/Image 1.jpg";
-import Image11 from "../assets/images/Image 2.jpg";
+import Image10 from "../assets/images/POS Screen with Tablet.png";
+
 import Image12 from "../assets/images/Table Kiosk.png";
+import Image13 from "../assets/images/Image 1.jpg";
+import Image1 from "../assets/images/1.png";
+import Image2 from "../assets/images/2.png";
+import Image15 from "../assets/images/3.png";
 
 import "./FeaturesPage.css";
 
@@ -72,7 +76,7 @@ const FeaturesPage = () => {
                 title: "Point of Sales (POS)",
                 content:
                   "A powerful point-of-sale system designed for speed, ease, and flexibility.",
-                image: Image10,
+                image: Image1,
                 subFeatures: [
                   {
                     title: "Table Management",
@@ -100,7 +104,7 @@ const FeaturesPage = () => {
                 title: "Kitchen Display System (KDS)",
                 content:
                   "Streamline Back-of-House operations with digital screens - No more paper dockets",
-                image: Image11,
+                image: Image2,
                 subFeatures: [
                   {
                     title: "Order Management",
@@ -123,7 +127,7 @@ const FeaturesPage = () => {
                 title: "Multiple Syncing POS/KDS",
                 content:
                   "Use unlimited POS and KDS devices across your venue - Always in syce",
-                image: Image10,
+                image: Image13,
                 subFeatures: [
                   {
                     title: "Multi-Terminal POS & KDS Sync",
@@ -146,7 +150,7 @@ const FeaturesPage = () => {
                 title: "Sales and Analytics",
                 content:
                   "Gain Actionable Insights into your restaurant's performance",
-                image: Image10,
+                image: Image1,
                 subFeatures: [
                   {
                     title: "Total Sales & Number of orders",
@@ -174,7 +178,7 @@ const FeaturesPage = () => {
                 title: "Inventory Management",
                 content:
                   "Keep track of stock, ingredients, and suppliers from one dashboard.",
-                image: Image10,
+                image: Image15,
                 subFeatures: [
                   {
                     title: "Stock Management",
@@ -423,12 +427,6 @@ const FeaturesPage = () => {
                     <p>{feature.content}</p>
                     <div className="faq-list">
                       {[
-                        {
-                          question:
-                            "Can Smart Table Kiosk integrate with existing POS systems?",
-                          answer:
-                            "No, it cannot. The Smart Table Kiosk includes a fully integrated POS and Kitchen Display System (KDS), ensuring seamless connectivity and efficient restaurant operations.",
-                        },
                         {
                           question:
                             "Does Smart Table Kiosk support multiple languages?",

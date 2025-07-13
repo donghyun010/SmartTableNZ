@@ -9,52 +9,52 @@ const HomePage = () => {
   const featureHighlights = [
     {
       title: "Point of Sales (POS)",
-      img: require("../assets/images/Image 1.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Create a seamless online experience with your brand front and center.",
     },
     {
       title: "Kitchen Disply System",
-      img: require("../assets/images/Image 4.jpg"),
+      img: require("../assets/images/KDS.png"),
       desc: "Give your customers more reasons to return with custom rewards.",
     },
     {
       title: "Multiple POS & KDS",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "Online Ordering",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "Online Reservation",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "QR Ordering",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "Sales Analytics",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/Sales.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "Inventory Management",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "Loyalty Program",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/Loyalty.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
     {
       title: "Delievery App Integration",
-      img: require("../assets/images/Image 6.jpg"),
+      img: require("../assets/images/POS.png"),
       desc: "Serve diverse communities with support for multiple languages.",
     },
   ];
@@ -207,12 +207,6 @@ const HomePage = () => {
           <hr className="section-divider" />
           <div className="faq-list">
             {[
-              {
-                question:
-                  "Can Smart Table Kiosk integrate with existing POS systems?",
-                answer:
-                  "No, it cannot. The Smart Table Kiosk includes a fully integrated POS and Kitchen Display System (KDS), ensuring seamless connectivity and efficient restaurant operations.",
-              },
               {
                 question: "Does Smart Table Kiosk support multiple languages?",
                 answer:

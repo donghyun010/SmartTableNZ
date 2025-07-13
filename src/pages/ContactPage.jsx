@@ -65,10 +65,22 @@ const ContactPage = () => {
           {/* Right Side (Form) */}
           <div style={{ flex: "1 1 300px" }}>
             <form
-              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              action="https://formsubmit.co/contact@smarttable.co.nz"
               method="POST"
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
             >
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thank you for contacting Smart Table! We’ll get back to you shortly."
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://smarttable.co.nz/thank-you"
+              />
+              <input type="text" name="_honey" style={{ display: "none" }} />
+
               <label style={{ fontWeight: 500 }}>
                 Name<span style={{ color: "#00bcd4" }}> *</span>
               </label>
@@ -89,37 +101,28 @@ const ContactPage = () => {
                 required
                 style={{ ...inputStyle, resize: "vertical" }}
               />
-
-              {/* reCAPTCHA placeholder */}
               <div
                 style={{
-                  background: "#fff",
-                  padding: "10px",
-                  borderRadius: "5px",
-                  color: "#000",
-                  textAlign: "center",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  fontSize: "14px",
+                  whiteSpace: "nowrap",
+                  width: "100%",
                 }}
               >
-                <p style={{ margin: 0 }}>
-                  I'm not a robot (reCAPTCHA placeholder)
-                </p>
+                <span style={{ flex: 1 }}>
+                  I agree to the Smart Table{" "}
+                  <a
+                    href="/privacy-policy"
+                    style={{ color: "#00bcd4", textDecoration: "underline" }}
+                  >
+                    Privacy Policy
+                  </a>
+                  .
+                </span>
+                <input type="checkbox" required />
               </div>
-
-              <label style={{ fontSize: "14px" }}>
-                <input
-                  type="checkbox"
-                  required
-                  style={{ marginRight: "8px" }}
-                />
-                I agree to the Smart Table{" "}
-                <a
-                  href="/privacy-policy"
-                  style={{ color: "#00bcd4", textDecoration: "underline" }}
-                >
-                  Privacy Policy
-                </a>
-                .
-              </label>
 
               <div style={{ display: "flex", gap: "10px" }}>
                 <button type="submit" style={submitButtonStyle}>

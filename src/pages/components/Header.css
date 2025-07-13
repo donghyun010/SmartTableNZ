@@ -21,7 +21,9 @@ header nav a {
 }
 
 .header-box {
-  background-color: #1b3662;
+  background-color: rgba(27, 54, 98, 0.4); /* semi-transparent */
+  backdrop-filter: blur(12px); /* blur effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 30px;
