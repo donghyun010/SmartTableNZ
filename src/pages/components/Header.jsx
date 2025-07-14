@@ -10,9 +10,9 @@ const Header = () => {
           Features
         </Link>
         <div className="dropdown-content">
-          <Link to="/Features#pos">Restaurant Operations</Link>
-          <Link to="/Features#kds">Front-of-House Features</Link>
-          <Link to="/Features#kiosk">Optional Add-Ons</Link>
+          <Link to="/Features#operations">Restaurant Operations</Link>
+          <Link to="/Features#front">Front-of-House Features</Link>
+          <Link to="/Features#addons">Optional Add-Ons</Link>
         </div>
       </div>
       <Link to="/pricing">Pricing</Link>
