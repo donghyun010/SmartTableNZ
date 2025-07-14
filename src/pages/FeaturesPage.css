@@ -182,6 +182,11 @@
   margin-top: 80px;
 }
 
+.segmented-tab-background-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .segmented-tab-background {
   width: 100%;
   max-width: 800px;

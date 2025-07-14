@@ -15,18 +15,28 @@ import PricingPage from "./pages/PricingPage";
 // Wrapper to manage body class dynamically
 function BodyClassController() {
   const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
-    const path = location.pathname;
-
-    if (path === "/") {
+    if (pathname === "/") {
       document.body.classList.add("home-page");
       document.body.classList.remove("plain-page");
     } else {
       document.body.classList.add("plain-page");
       document.body.classList.remove("home-page");
     }
-  }, [location.pathname]);
+  }, [pathname]);
+
+  if (!pathname.includes("contact")) {
+    return (
+      <>
+        {/* 🔵 Background gradient spots */}
+        <div className="gradient-spot spot-1"></div>
+        <div className="gradient-spot spot-2"></div>
+        <div className="gradient-spot spot-3"></div>
+      </>
+    );
+  }
 
   return null;
 }
@@ -35,11 +45,6 @@ function App() {
   return (
     <Router basename="/SmartTableNZ">
       <BodyClassController />
-
-      {/* 🔵 Background gradient spots */}
-      <div className="gradient-spot spot-1"></div>
-      <div className="gradient-spot spot-2"></div>
-      <div className="gradient-spot spot-3"></div>
 
       <Routes>
         <Route path="/" element={<HomePage />} />

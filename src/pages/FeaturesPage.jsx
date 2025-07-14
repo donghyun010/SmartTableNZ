@@ -41,22 +41,24 @@ const FeaturesPage = () => {
         {activeTab === "operations" && <div id="restaurant-operations" />}
         {activeTab === "front" && <div id="front-of-house" />}
         {activeTab === "addons" && <div id="optional-addons" />}
-        <div className="segmented-tab-background">
-          {[
-            { key: "operations", label: "Restaurant Operations" },
-            { key: "front", label: "Front-of-House Features" },
-            { key: "addons", label: "Optional Add-Ons" },
-          ].map((tab) => (
-            <button
-              key={tab.key}
-              className={`segmented-tab-button ${
-                activeTab === tab.key ? "active" : ""
-              }`}
-              onClick={() => setActiveTab(tab.key)}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="segmented-tab-background-wrapper">
+          <div className="segmented-tab-background">
+            {[
+              { key: "operations", label: "Restaurant Operations" },
+              { key: "front", label: "Front-of-House Features" },
+              { key: "addons", label: "Optional Add-Ons" },
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                className={`segmented-tab-button ${
+                  activeTab === tab.key ? "active" : ""
+                }`}
+                onClick={() => setActiveTab(tab.key)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="segmented-tab-features">
