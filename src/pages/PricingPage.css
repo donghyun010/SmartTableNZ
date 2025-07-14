@@ -1,5 +1,30 @@
+.feature-section-title {
+  margin: 0;
+}
+
 .features-section {
-  padding-top: 150px; /* Adjust to your header height */
+  padding-top: 200px; /* Adjust to your header height */
+}
+
+.feature-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 1;
+  max-width: 333px;
+  min-width: 333px;
+}
+
+@media only screen and (max-width: 737px) {
+  .feature-card-grid {
+    justify-content: center;
+  }
+
+  .feature-card {
+    min-width: 100%;
+  }
 }
 
 .calculator {
