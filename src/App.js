@@ -35,6 +35,12 @@ function App() {
   return (
     <Router basename="/SmartTableNZ">
       <BodyClassController />
+
+      {/* 🔵 Background gradient spots */}
+      <div className="gradient-spot spot-1"></div>
+      <div className="gradient-spot spot-2"></div>
+      <div className="gradient-spot spot-3"></div>
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
