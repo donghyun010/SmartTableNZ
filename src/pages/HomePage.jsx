@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import logo from "../assets/images/DarkLogo.png";
-import Header from "./components/Header";
+import { useState } from "react";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import "./HomePage.css";
+import AppHeader from "./components/AppHeader";
 
 const HomePage = () => {
   const featureHighlights = [
@@ -62,18 +61,8 @@ const HomePage = () => {
   const [selectedFeature, setSelectedFeature] = useState(featureHighlights[0]);
 
   return (
-    <>
-      <div className="banner-header">
-        <div className="header-box">
-          <nav>
-            <div className="logo">
-              <img src={logo} alt="Smart Table Logo" />
-            </div>
-            <Header />
-          </nav>
-        </div>
-      </div>
-
+    <div className="home-page">
+      <AppHeader />
       <section className="full-banner">
         <div className="banner-content">
           <h1>
@@ -138,7 +127,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="features" className="clickable-feature-tags">
+      <section id="features" className="features-section">
         <div className="content-wrapper">
           <h2 className="section-title">Features</h2>
           <hr className="section-divider" />
@@ -274,7 +263,7 @@ const HomePage = () => {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

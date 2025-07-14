@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import logo from "../assets/images/DarkLogo.png";
-import Header from "./components/Header";
+import { useState } from "react";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import { useEffect } from "react";
@@ -15,6 +13,7 @@ import Image2 from "../assets/images/2.png";
 import Image15 from "../assets/images/3.png";
 
 import "./FeaturesPage.css";
+import AppHeader from "./components/AppHeader";
 
 const FeaturesPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -36,16 +35,7 @@ const FeaturesPage = () => {
 
   return (
     <>
-      <div className="banner-header">
-        <div className="header-box">
-          <nav>
-            <div className="logo">
-              <img src={logo} alt="Smart Table Logo" />
-            </div>
-            <Header />
-          </nav>
-        </div>
-      </div>
+      <AppHeader />
 
       <section className="segmented-tab-wrapper" style={{ marginTop: "80px" }}>
         {activeTab === "operations" && <div id="restaurant-operations" />}

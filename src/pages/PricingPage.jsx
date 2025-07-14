@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import logo from "../assets/images/DarkLogo.png";
-import Header from "./components/Header";
+import { useState } from "react";
 import Footer from "./components/Footer";
 import "./PricingPage.css";
+import AppHeader from "./components/AppHeader";
 
 const PricingPage = () => {
   const [tabletCount, setTabletCount] = useState(0);
@@ -49,17 +48,7 @@ const PricingPage = () => {
 
   return (
     <div>
-      <header>
-        <div className="header-box">
-          <nav>
-            <div className="logo">
-              <img src={logo} alt="Smart Table Logo" />
-            </div>
-            <Header />
-          </nav>
-        </div>
-      </header>
-
+      <AppHeader />
       <section className="features-section">
         <div className="content-wrapper">
           <h2 className="section-title">Pricing Plans</h2>

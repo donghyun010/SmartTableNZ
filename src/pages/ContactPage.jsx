@@ -1,122 +1,72 @@
-import React from "react";
-import logo from "../assets/images/DarkLogo.png";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import "./ContactPage.css";
+import Footer from "./components/Footer";
+import AppHeader from "./components/AppHeader";
 
 const ContactPage = () => {
   return (
-    <div
-      style={{
-        background: "linear-gradient(to right, #0d1b2a, #1b3662, #3d6aa3)",
-        color: "#fff",
-        minHeight: "100vh",
-      }}
-    >
-      <header>
-        <div className="header-box">
-          <nav>
-            <div className="logo">
-              <img src={logo} alt="Smart Table Logo" />
-            </div>
-            <Header />
-          </nav>
-        </div>
-      </header>
+    <div className="contact-page">
+      <AppHeader />
 
-      <section
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "60px 20px",
-        }}
-      >
-        <div
-          className="content-wrapper"
-          style={{ display: "flex", gap: "60px", flexWrap: "wrap" }}
-        >
+      <section className="contact-section">
+        <div className="content-wrapper">
           {/* Left Side */}
-          <div style={{ flex: "1 1 300px" }}>
-            <p
-              style={{
-                color: "#00bcd4",
-                fontWeight: "500",
-                marginBottom: "10px",
-              }}
-            >
-              Contact Us
-            </p>
-            <h1
-              style={{
-                fontSize: "48px",
-                fontWeight: "700",
-                margin: "0 0 20px",
-              }}
-            >
-              How can we help?
-            </h1>
-            <p style={{ fontSize: "16px", color: "#ccc" }}>
-              Let’s kick-start the conversation and discuss your path to
+          <div className="contact-left">
+            <p className="contact-subtitle">Contact Us</p>
+            <h1 className="contact-title">How can we help?</h1>
+            <p className="contact-description">
+              Let's kick-start the conversation and discuss your path to
               transformative growth.
             </p>
           </div>
 
           {/* Right Side (Form) */}
-          <div style={{ flex: "1 1 300px" }}>
+          <div className="contact-right">
             <form
               action="https://formsubmit.co/contact@smarttable.co.nz"
               method="POST"
-              style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+              className="contact-form"
             >
               <input
                 type="hidden"
                 name="_autoresponse"
-                value="Thank you for contacting Smart Table! We’ll get back to you shortly."
+                value="Thank you for contacting Smart Table! We'll get back to you shortly."
               />
               <input
                 type="hidden"
                 name="_next"
                 value="https://smarttable.co.nz/thank-you"
               />
-              <input type="text" name="_honey" style={{ display: "none" }} />
+              <input type="text" name="_honey" className="hidden" />
 
-              <label style={{ fontWeight: 500 }}>
-                Name<span style={{ color: "#00bcd4" }}> *</span>
+              <label className="form-label">
+                Name<span className="required-asterisk"> *</span>
               </label>
-              <input type="text" name="name" required style={inputStyle} />
+              <input type="text" name="name" required className="form-input" />
 
-              <label style={{ fontWeight: 500 }}>
-                Email<span style={{ color: "#00bcd4" }}> *</span>
+              <label className="form-label">
+                Email<span className="required-asterisk"> *</span>
               </label>
-              <input type="email" name="email" required style={inputStyle} />
+              <input
+                type="email"
+                name="email"
+                required
+                className="form-input"
+              />
 
-              <label style={{ fontWeight: 500 }}>Phone</label>
-              <input type="tel" name="phone" style={inputStyle} />
+              <label className="form-label">Phone</label>
+              <input type="tel" name="phone" className="form-input" />
 
-              <label style={{ fontWeight: 500 }}>Message</label>
+              <label className="form-label">Message</label>
               <textarea
                 name="message"
                 rows="4"
                 required
-                style={{ ...inputStyle, resize: "vertical" }}
+                className="form-textarea"
               />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  fontSize: "14px",
-                  whiteSpace: "nowrap",
-                  width: "100%",
-                }}
-              >
-                <span style={{ flex: 1 }}>
+              <div className="privacy-checkbox-container">
+                <span className="privacy-text">
                   I agree to the Smart Table{" "}
-                  <a
-                    href="/privacy-policy"
-                    style={{ color: "#00bcd4", textDecoration: "underline" }}
-                  >
+                  <a href="/privacy-policy" className="privacy-link">
                     Privacy Policy
                   </a>
                   .
@@ -124,11 +74,11 @@ const ContactPage = () => {
                 <input type="checkbox" required />
               </div>
 
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button type="submit" style={submitButtonStyle}>
+              <div className="button-container">
+                <button type="submit" className="submit-button">
                   Submit
                 </button>
-                <button type="reset" style={resetButtonStyle}>
+                <button type="reset" className="reset-button">
                   Reset
                 </button>
               </div>
@@ -140,32 +90,6 @@ const ContactPage = () => {
       <Footer />
     </div>
   );
-};
-
-const inputStyle = {
-  padding: "10px",
-  border: "none",
-  borderRadius: "5px",
-  backgroundColor: "rgba(255,255,255,0.1)",
-  color: "#fff",
-};
-
-const submitButtonStyle = {
-  padding: "10px 20px",
-  backgroundColor: "#00bcd4",
-  color: "#fff",
-  border: "none",
-  borderRadius: "5px",
-  cursor: "pointer",
-};
-
-const resetButtonStyle = {
-  padding: "10px 20px",
-  backgroundColor: "#fff",
-  color: "#000",
-  border: "none",
-  borderRadius: "5px",
-  cursor: "pointer",
 };
 
 export default ContactPage;
