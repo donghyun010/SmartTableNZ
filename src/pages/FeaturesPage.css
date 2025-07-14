@@ -188,16 +188,16 @@
   background: #f0f9ff;
   border-radius: 999px;
   padding: 10px;
-  display: inline-flex;
+  display: flex;
   box-shadow: 0 0 24px rgba(0, 160, 255, 0.1);
   margin-bottom: 40px;
-  margin: 0 30px;
 }
 
 .segmented-tab-button {
   border: none;
+  /* border: 1px solid red; */
   background: transparent;
-  padding: 10px 15px;
+  /* padding: 10px 15px; */
   border-radius: 999px;
   font-weight: 600;
   color: #1e293b;
@@ -214,7 +214,21 @@
   background: white;
   color: #2563eb;
   box-shadow: 0 0 15px rgba(249, 115, 22, 0.15);
-  margin: 0 5px;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 500px) {
+  .segmented-tab-background {
+    padding: 0px;
+  }
+
+  .segmented-tab-button {
+    font-size: 0.8rem;
+  }
+
+  .segmented-tab-button.active {
+    transform: scale(1);
+  }
 }
 
 .carousel-centered-wrapper {
