@@ -447,3 +447,48 @@
   margin-bottom: 20px;
   box-shadow: none;
 }
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .full-banner {
+    padding: 0 15px;
+    padding-top: 100px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .smart-table-icon-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .feature-tag-grid {
+    justify-content: center;
+    padding: 15px 10px;
+  }
+
+  .feature-tag {
+    font-size: 0.8rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .smart-table-icon-grid {
+    grid-template-columns: 1fr;
+  }
+}
