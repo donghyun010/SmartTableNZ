@@ -8,28 +8,31 @@
 }
 
 .features-section {
-  padding: 100px 20px;
+  padding: 150px 20px;
+  padding-top: 500px;
   color: white;
 }
 
 .feature-card-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 32px;
+  justify-content: center;
 }
 
 .feature-card {
-  flex: 1;
-  max-width: 333px;
-  min-width: 333px;
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 
-@media only screen and (max-width: 737px) {
+/* Force all 3 in a row on desktop */
+@media (min-width: 1024px) {
   .feature-card-grid {
-    justify-content: center;
+    flex-wrap: nowrap;
   }
 
   .feature-card {
-    min-width: 100%;
+    flex: 0 0 320px;
   }
 }
 
@@ -124,9 +127,10 @@ button:hover {
 
 .pricing-card-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 32px;
-  justify-content: center;
+  overflow-x: auto;
 }
 
 .pricing-card {
@@ -135,7 +139,7 @@ button:hover {
   border-radius: 12px;
   padding: 20px;
   color: white;
-  flex: 1 1 280px;
+  flex: 0 0 32%; /* take exactly 32% of parent */
   min-width: 280px;
   max-width: 350px;
   transition: transform 0.3s ease;
@@ -159,4 +163,8 @@ button:hover {
 .pricing-card p {
   font-size: 0.95rem;
   opacity: 0.85;
+}
+
+.features-section:nth-of-type(2) {
+  padding-top: 80px !important;
 }

@@ -1,16 +1,30 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./ResponsiveNav.css";
 
 const ResponsiveNav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsFeaturesOpen(false); // reset dropdown on open/close
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+    setIsFeaturesOpen(false);
+  };
+
+  const toggleFeaturesDropdown = () => {
+    setIsFeaturesOpen(!isFeaturesOpen);
+  };
+
+  const isActive = (path, hash = "") => {
+    return (
+      location.pathname === path && (hash === "" || location.hash === hash)
+    );
   };
 
   return (
@@ -20,6 +34,7 @@ const ResponsiveNav = () => {
         <Link to="/" className="responsive-nav-link">
           Home
         </Link>
+
         <div className="responsive-dropdown">
           <Link
             to="/Features"
@@ -42,6 +57,7 @@ const ResponsiveNav = () => {
             </Link>
           </div>
         </div>
+
         <Link to="/pricing" className="responsive-nav-link">
           Pricing
         </Link>
@@ -72,47 +88,71 @@ const ResponsiveNav = () => {
         <div className="responsive-mobile-nav-content">
           <Link
             to="/"
-            className="responsive-mobile-nav-link"
+            className={`responsive-mobile-nav-link ${
+              isActive("/") ? "active" : ""
+            }`}
             onClick={closeMobileMenu}
           >
             Home
           </Link>
-          <div className="responsive-mobile-dropdown">
-            <span className="responsive-mobile-dropdown-title">Features</span>
+
+          <button
+            className={`responsive-mobile-nav-link responsive-mobile-dropdown-toggle ${
+              isFeaturesOpen ? "open" : ""
+            }`}
+            onClick={toggleFeaturesDropdown}
+          >
+            <span>Features</span>
+            <span className="arrow">{isFeaturesOpen ? "▲" : "▼"}</span>
+          </button>
+
+          {isFeaturesOpen && (
             <div className="responsive-mobile-dropdown-links">
               <Link
                 to="/Features#operations"
-                className="responsive-mobile-nav-link"
+                className={`responsive-mobile-nav-link ${
+                  isActive("/Features", "#operations") ? "active" : ""
+                }`}
                 onClick={closeMobileMenu}
               >
                 Restaurant Operations
               </Link>
               <Link
                 to="/Features#front"
-                className="responsive-mobile-nav-link"
+                className={`responsive-mobile-nav-link ${
+                  isActive("/Features", "#front") ? "active" : ""
+                }`}
                 onClick={closeMobileMenu}
               >
                 Front-of-House Features
               </Link>
               <Link
                 to="/Features#addons"
-                className="responsive-mobile-nav-link"
+                className={`responsive-mobile-nav-link ${
+                  isActive("/Features", "#addons") ? "active" : ""
+                }`}
                 onClick={closeMobileMenu}
               >
                 Optional Add-Ons
               </Link>
             </div>
-          </div>
+          )}
+
           <Link
             to="/pricing"
-            className="responsive-mobile-nav-link"
+            className={`responsive-mobile-nav-link ${
+              isActive("/pricing") ? "active" : ""
+            }`}
             onClick={closeMobileMenu}
           >
             Pricing
           </Link>
+
           <Link
             to="/contact"
-            className="responsive-mobile-nav-link"
+            className={`responsive-mobile-nav-link ${
+              isActive("/contact") ? "active" : ""
+            }`}
             onClick={closeMobileMenu}
           >
             Contact

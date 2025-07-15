@@ -182,6 +182,12 @@
   font-weight: 500 !important;
   margin-bottom: 10px !important;
   display: block !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  text-align: left !important;
+  width: 100% !important;
+  cursor: pointer !important;
 }
 
 .responsive-mobile-dropdown-links {
@@ -196,6 +202,26 @@
   padding: 10px 0 !important;
   border-bottom: none !important;
   color: rgba(255, 255, 255, 0.9) !important;
+}
+.responsive-mobile-dropdown-toggle {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  padding: 18px 0 !important;
+  width: 100% !important;
+  cursor: pointer !important;
+}
+
+.responsive-mobile-dropdown-toggle .arrow {
+  font-size: 20px !important;
+  margin-left: 10px !important;
+  color: white !important;
+  transition: transform 0.3s ease;
 }
 
 /* Mobile Overlay */
@@ -249,4 +275,16 @@
 .responsive-mobile-nav button {
   box-sizing: border-box !important;
   outline: none !important;
+}
+
+/* Make mobile nav links large and bold */
+.responsive-mobile-nav-link {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  padding: 18px 0 !important;
+}
+
+/* Highlight current page */
+.responsive-mobile-nav-link.active {
+  color: #00d8ff !important; /* Use your highlight color here */
 }
