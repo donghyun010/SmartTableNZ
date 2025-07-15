@@ -8,7 +8,7 @@ const ContactPage = () => {
       <AppHeader />
 
       <section className="contact-section">
-        <div className="content-wrapper">
+        <div className="content-wrapper contact-page-content-wrapper">
           {/* Left Side */}
           <div className="contact-left">
             <p className="contact-subtitle">Contact Us</p>

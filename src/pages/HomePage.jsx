@@ -180,7 +180,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="kiosk-steps" className="section">
+      <section id="kiosk-steps" className="section kiosk-steps-section">
         <div className="content-wrapper">
           <h2 className="section-title">
             Smart Ordering in 3 Steps Using Table Kiosk
@@ -190,7 +190,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="faq" className="section">
+      <section id="faq" className="section faq-section">
         <div className="content-wrapper">
           <h2 className="section-title">FAQ on Table Kiosk</h2>
           <hr className="section-divider" />

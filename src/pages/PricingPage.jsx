@@ -49,6 +49,7 @@ const PricingPage = () => {
   return (
     <div>
       <AppHeader />
+      <div className="spacer" />
       <section className="features-section">
         <div className="content-wrapper">
           <h2 className={`feature-section-title section-title`}>
@@ -89,7 +90,7 @@ const PricingPage = () => {
         </div>
       </section>
 
-      <section className="section">
+      <section className="features-section">
         <div className="content-wrapper">
           <h2 className={`feature-section-title section-title`}>
             Estimate Your Monthly Cost

@@ -200,9 +200,7 @@
 
 .segmented-tab-button {
   border: none;
-  /* border: 1px solid red; */
   background: transparent;
-  /* padding: 10px 15px; */
   border-radius: 999px;
   font-weight: 600;
   color: #1e293b;
