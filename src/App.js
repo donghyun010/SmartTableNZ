@@ -5,13 +5,12 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
-
+import ScrollToTop from "./pages/components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import FeaturesPage from "./pages/FeaturesPage";
 import ContactPage from "./pages/ContactPage";
 import PricingPage from "./pages/PricingPage";
-import ScrollToTop from "./pages/components/ScrollToTop";
 
 // Wrapper to manage body class dynamically
 function BodyClassController() {

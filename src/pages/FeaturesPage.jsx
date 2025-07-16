@@ -5,8 +5,10 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import Image12 from "../assets/images/Table Kiosk.png";
-import Image1 from "../assets/images/1.png";
-import Image2 from "../assets/images/2.png";
+import Image1 from "../assets/images/POS.png";
+import Image2 from "../assets/images/KDS.png";
+import Image4 from "../assets/images/Sales.png";
+import Image9 from "../assets/images/Loyalty.png";
 
 import "./FeaturesPage.css";
 import AppHeader from "./components/AppHeader";
@@ -138,7 +140,7 @@ const FeaturesPage = () => {
                 title: "Sales and Analytics",
                 content:
                   "Gain Actionable Insights into your restaurant's performance",
-                image: Image1,
+                image: Image4,
                 subFeatures: [
                   {
                     title: "Total Sales & Number of orders",
@@ -249,7 +251,7 @@ const FeaturesPage = () => {
                 title: "Loyalty Program",
                 content:
                   "Custom loyalty and voucher tools for customers, staff and companies.",
-                image: Image1,
+                image: Image9,
                 subFeatures: [
                   {
                     title: "Loyalty for Regulars or Companies",
