@@ -47,16 +47,14 @@ const PricingPage = () => {
   };
 
   return (
-    <div>
+    <div className="pricing-page">
       <AppHeader />
       <div className="spacer" />
+
       <section className="features-section">
         <div className="content-wrapper">
-          <h2 className={`feature-section-title section-title`}>
-            Pricing Plans
-          </h2>
+          <h2 className="feature-section-title section-title">Pricing Plans</h2>
           <hr className="section-divider" />
-
           <div className="feature-card-grid">
             {pricingOptions.map((option, i) => (
               <div
@@ -92,7 +90,7 @@ const PricingPage = () => {
 
       <section className="features-section">
         <div className="content-wrapper">
-          <h2 className={`feature-section-title section-title`}>
+          <h2 className="feature-section-title section-title">
             Estimate Your Monthly Cost
           </h2>
           <hr className="section-divider" />

@@ -4,13 +4,9 @@ import ImageCarousel from "./components/ImageCarousel";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Image10 from "../assets/images/POS Screen with Tablet.png";
-
 import Image12 from "../assets/images/Table Kiosk.png";
-import Image13 from "../assets/images/Image 1.jpg";
 import Image1 from "../assets/images/1.png";
 import Image2 from "../assets/images/2.png";
-import Image15 from "../assets/images/3.png";
 
 import "./FeaturesPage.css";
 import AppHeader from "./components/AppHeader";
@@ -119,7 +115,7 @@ const FeaturesPage = () => {
                 title: "Multiple Syncing POS/KDS",
                 content:
                   "Use unlimited POS and KDS devices across your venue - Always in syce",
-                image: Image13,
+                image: Image1,
                 subFeatures: [
                   {
                     title: "Multi-Terminal POS & KDS Sync",
@@ -170,7 +166,7 @@ const FeaturesPage = () => {
                 title: "Inventory Management",
                 content:
                   "Keep track of stock, ingredients, and suppliers from one dashboard.",
-                image: Image15,
+                image: Image1,
                 subFeatures: [
                   {
                     title: "Stock Management",
@@ -194,7 +190,7 @@ const FeaturesPage = () => {
               {
                 title: "Online Ordering",
                 content: "Oneline Ordering Integrated with POS & KDS",
-                image: Image10,
+                image: Image1,
                 subFeatures: [
                   {
                     title:
@@ -214,7 +210,7 @@ const FeaturesPage = () => {
                 title: "Online Reservations",
                 content:
                   "Enable guests to book tables from your website or partner platforms.",
-                image: "../assets/images/feature-7.jpg",
+                image: Image1,
                 subFeatures: [
                   {
                     title:
@@ -234,7 +230,7 @@ const FeaturesPage = () => {
                 title: "QR Code Ordering",
                 content:
                   "Guests can scan, view the menu, and order directly from their table.",
-                image: "../assets/images/feature-8.jpg",
+                image: Image1,
                 subFeatures: [
                   {
                     title:
@@ -253,7 +249,7 @@ const FeaturesPage = () => {
                 title: "Loyalty Program",
                 content:
                   "Custom loyalty and voucher tools for customers, staff and companies.",
-                image: "../assets/images/feature-9.jpg",
+                image: Image1,
                 subFeatures: [
                   {
                     title: "Loyalty for Regulars or Companies",
@@ -276,7 +272,7 @@ const FeaturesPage = () => {
                 title: "Delivery Service Integration",
                 content:
                   "Sync with platforms like Uber Eats or DoorDash with minimal setup.",
-                image: "../assets/images/feature-10.jpg",
+                image: Image1,
                 subFeatures: [
                   {
                     title:

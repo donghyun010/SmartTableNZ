@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import FeaturesPage from "./pages/FeaturesPage";
 import ContactPage from "./pages/ContactPage";
 import PricingPage from "./pages/PricingPage";
+import ScrollToTop from "./pages/components/ScrollToTop";
 
 // Wrapper to manage body class dynamically
 function BodyClassController() {
@@ -44,8 +45,8 @@ function BodyClassController() {
 function App() {
   return (
     <Router basename="/SmartTableNZ">
+      <ScrollToTop /> {/* 👈 add here */}
       <BodyClassController />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
