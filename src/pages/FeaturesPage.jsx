@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Image12 from "../assets/images/Table Kiosk.png";
 import Image1 from "../assets/images/POS.png";
@@ -421,7 +422,7 @@ const FeaturesPage = () => {
                           question:
                             "Does Smart Table Kiosk support multiple languages?",
                           answer:
-                            "Yes, we currently support English, Korean, and Chinese. If you require additional languages, please reach out to us for customization options.",
+                            "Yes, we currently support English, Korean, Chinese & Japanese. If you require additional languages, please reach out to us for customization options.",
                         },
                         {
                           question:
@@ -476,10 +477,20 @@ const FeaturesPage = () => {
         <div className="content-wrapper">
           <h2 className="section-title">Interested in Smart Table?</h2>
           <hr className="section-divider" />
-          <p>
-            Book a free demo and discover how Smart Table’s core features can
-            transform your restaurant operations.
-          </p>
+          <div className="demo-content">
+            <p>
+              Contact us today and see how Smart Table can transform your
+              operations.
+            </p>
+            <Link
+              to="/contact"
+              className="cta-button"
+              style={{ marginTop: "30px", display: "inline-block" }}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 

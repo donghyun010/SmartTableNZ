@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import "./HomePage.css";
 import AppHeader from "./components/AppHeader";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const featureHighlights = [
@@ -74,9 +75,13 @@ const HomePage = () => {
             Enhance your customers' experience while reducing costs and
             increasing efficiency with Smart Table
           </p>
-          <a href="/contact" className="banner-button">
+          <Link
+            to="/contact"
+            className="banner-button"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             CONTACT US
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -199,7 +204,7 @@ const HomePage = () => {
               {
                 question: "Does Smart Table Kiosk support multiple languages?",
                 answer:
-                  "Yes, we currently support English, Korean, and Chinese. If you require additional languages, please reach out to us for customization options.",
+                  "Yes, we currently support English, Korean, Chinese & Japanese. If you require additional languages, please reach out to us for customization options.",
               },
               {
                 question:
@@ -251,13 +256,14 @@ const HomePage = () => {
               Contact us today and see how Smart Table can transform your
               operations.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="cta-button"
               style={{ marginTop: "30px", display: "inline-block" }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               Request a Demo
-            </a>
+            </Link>
           </div>
         </div>
       </section>

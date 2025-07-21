@@ -340,6 +340,8 @@
 .feature-tag {
   display: inline-block;
   width: auto;
+  max-width: 100%;
+  word-wrap: break-word;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
@@ -465,6 +467,29 @@
     font-size: 2rem;
   }
 
+  @media (max-width: 768px) {
+    .feature-tag-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 per row */
+      gap: 12px 16px;
+      gap: 16px;
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+
+    .feature-tag-grid > * {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .feature-tag {
+      font-size: 0.85rem;
+      padding: 10px 14px;
+    }
+  }
+
   .banner-content p {
     font-size: 1rem;
   }
@@ -490,8 +515,9 @@
   }
 
   .feature-tag {
+    width: 100%;
     font-size: 0.8rem;
-    padding: 10px 16px;
+    padding: 10px 10px;
   }
 }
 
