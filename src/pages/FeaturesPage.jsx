@@ -43,8 +43,8 @@ const FeaturesPage = () => {
         <div className="segmented-tab-background-wrapper">
           <div className="segmented-tab-background">
             {[
-              { key: "operations", label: "Restaurant Operations" },
-              { key: "front", label: "Front-of-House Features" },
+              { key: "operations", label: "Business Management" },
+              { key: "front", label: "Restaurant Operations" },
               { key: "addons", label: "Optional Add-Ons" },
             ].map((tab) => (
               <button

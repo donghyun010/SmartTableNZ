@@ -63,16 +63,6 @@ const ContactPage = () => {
                 required
                 className="form-textarea"
               />
-              <div className="privacy-checkbox-container">
-                <span className="privacy-text">
-                  I agree to the Smart Table{" "}
-                  <a href="/privacy-policy" className="privacy-link">
-                    Privacy Policy
-                  </a>
-                  .
-                </span>
-                <input type="checkbox" required />
-              </div>
 
               <div className="button-container">
                 <button type="submit" className="submit-button">
